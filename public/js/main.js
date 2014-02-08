@@ -1,9 +1,11 @@
 function reloadRegistered() {
-	var tmp = "";
+	var registeredWordsDom = $('#registered-words');
+	registeredWordsDom.html('');
 	for(var key in localStorage) {
-		tmp += (key + " " + localStorage[key] + "\n");
+		registeredWordsDom.append('<p>')
+		registeredWordsDom.append(key + ': ' + localStorage[key]);
+		registeredWordsDom.append('</p>')
 	};
-	alert(tmp);
 };
 
 function registerWord() {
