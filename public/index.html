@@ -7,18 +7,26 @@
 		<script src="js/lib/jquery-2.1.0.min.js"></script>
 		<script src="js/main.js"></script>
 
-		<form action="javascript:registerWord()" method="get">
+		<section id="newword">
+			<form action="javascript:registerWord()" method="get">
+				<p>
+					<label>Word:</lael>
+					<input type="text" id="word" required>
+				</p>
+				<p>
+					<label>Description:</label>
+					<input type="text" id="description" required>
+				</p>
+				<p>
+					<input type="submit" value="Register"/>
+				</p>
+			</form>
+		</section/>
+		<section>
 			<p>
-				<label>Word:</lael>
-				<input type="text" id="word" required>
+				<h1>Registered words:</h1>
+				<div id="registered-words">TODO</div>
 			</p>
-			<p>
-				<label>Description:</label>
-				<input type="text" id="description" required>
-			</p>
-			<p>
-				<input type="submit" value="Register"/>
-			</p>
-		</form>
+		</section>
 	</body>
 </html>
