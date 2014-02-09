@@ -5,6 +5,8 @@
 	</head>
 	<body onload="reloadRegistered();">
 		<script src="js/lib/jquery-2.1.0.min.js"></script>
+		<script src="js/lib/underscore-min.js"></script>
+		<script src="js/model/Word.js"></script>
 		<script src="js/main.js"></script>
 
 		<section id="newword">
@@ -17,6 +19,9 @@
 					<label>Description:</label>
 					<input type="text" id="description" required>
 				</p>
+					<label>Tags(optional, space-separated)</label>
+					<input type="text" id="tags">
+				</p>
 				<p>
 					<input type="submit" value="Register"/>
 				</p>
@@ -28,7 +33,13 @@
 				<form action="javascript:searchWords()" method="get">
 					<p>
 						<label>Search with a part of the word:</label>
-						<input type="text" id="searchWord" required>
+						<input type="text" id="search-word">
+					</p>
+					<p>
+						<label>Search with a tag: </label>
+						<input type="text" id="search-tag">
+					</p>
+					<p>
 						<input type="submit" value="search"/>
 					</p>
 				</form>

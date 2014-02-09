@@ -1,12 +1,14 @@
-function reloadRegistered(searchKey) {
+function reloadRegistered(searchKey, searchTag) {
 	var registeredWordsDom = $('#registered-words');
 	registeredWordsDom.html('');
 	for (var key in localStorage) {
-		if (searchKey) {
-			if (!key.match(new RegExp('^.*' + searchKey + '.*$'))) continue;
-		}
+		if (searchKey &&
+			!key.match(new RegExp('^.*' + searchKey + '.*$'))) continue;
+		var data = JSON.parse(localStorage[key]);
+		if (searchTag && !_.contains(data.tags, searchTag)) continue;
 		registeredWordsDom.append('<p>')
-		registeredWordsDom.append(key + ': ' + localStorage[key]);
+		registeredWordsDom.append(key + ': ' + data.description);
+		registeredWordsDom.append(" (tags: " + data.tags + ")");
 		registeredWordsDom.append('</p>')
 	}
 };
@@ -14,11 +16,13 @@ function reloadRegistered(searchKey) {
 function registerWord() {
 	var word = $("#word").val();
 	var desc = $("#description").val();
-	localStorage[word] = desc;
+	var tags = $("#tags").val().split(" ");
+	localStorage[word] = JSON.stringify(new Tofu.model.Word(word, desc, tags));
 	reloadRegistered();
 };
 
 function searchWords() {
-	var searchKey = $("#searchWord");
-	reloadRegistered(searchKey);
+	var searchKey = $("#search-word").val();
+	var searchTag = $("#search-tag").val();
+	reloadRegistered(searchKey, searchTag);
 };
