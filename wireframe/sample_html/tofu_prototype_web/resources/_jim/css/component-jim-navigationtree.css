@@ -1,0 +1,22 @@
+#navigationtree { list-style-type: none; overflow: auto; height: 100%; }
+#navigationtree li, #navigationtree ins { background: transparent url("../images/navigationtree/sprite.png") no-repeat 0 0 scroll; }
+#navigationtree li { background-position: -70px 0; background-repeat: repeat-y; line-height: 20px; min-height: 20px; white-space: nowrap; margin-left: 18px; }
+#navigationtree > li { margin-left: 0; }
+#navigationtree ins { display: inline-block; width: 14px; text-decoration: none; }
+#navigationtree  ul { list-style-type: none; }
+#navigationtree li.first { padding-top: 2px; }
+#navigationtree li.last { background:transparent; }
+#navigationtree li.clicked { background: navy; border: 1px solid navy; padding: 0 2px 0 1px; color: white; }
+#navigationtree li.closed > ul { display: none; }
+#navigationtree a.current { color: #000000; }
+#navigationtree a { color: #707070; white-space: nowrap; font-size:12px; }
+#navigationtree a:hover { color: #000000; }
+
+/* start splice images */
+#navigationtree li.leaf > ins { background-position: -35px 0; }
+#navigationtree li.open > ins, #navigationtree li.closed > ins { cursor: pointer; }
+#navigationtree li.open > ins { background-position: 0 -22px; }
+#navigationtree li.open.last > ins { background-position: -20px -22px; }
+#navigationtree li.closed.last > ins { background-position: -20px 0; }
+#navigationtree ins.folder { background-position: -50px 0; width: 20px; }
+#navigationtree li.open > a > ins.folder { background-position: -50px -22px; }
