@@ -10,7 +10,7 @@
 		<section id="newword">
 			<form action="javascript:registerWord()" method="get">
 				<p>
-					<label>Word:</lael>
+					<label>Word:</label>
 					<input type="text" id="word" required>
 				</p>
 				<p>
@@ -25,6 +25,14 @@
 		<section>
 			<p>
 				<h1>Registered words:</h1>
+				<form action="javascript:searchWords()" method="get">
+					<p>
+						<label>Search with a part of the word:</label>
+						<input type="text" id="searchWord" required>
+						<input type="submit" value="search"/>
+					</p>
+				</form>
+				<br/>
 				<div id="registered-words"></div>
 			</p>
 		</section>
