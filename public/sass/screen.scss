@@ -5,7 +5,20 @@
 
 @import "compass/reset";
 
+div#header{
+	font-family: arial black;
+	font-size: 30px;
+	color:white;
+	background-color: 444545;
+	height: 50px;
+	text-align:0,center;
+	text-indent: 200px;
+	padding-top:10;
+}
+
 #newword {
 	font-family: serif;
 	font-size: 20px;
 }
+
+
