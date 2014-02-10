@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -67,20 +68,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
-div#header {
-  font-family: arial black;
-  font-size: 30px;
-  color: white;
-  background-color: 444545;
-  height: 50px;
-  text-align: 0,center;
-  text-indent: 200px;
-  padding-top: 10;
+/*--------------------------------------------
+ 変数とか
+--------------------------------------------*/
+/*グリッドのパラメーター*/
+/*総グリッド数*/
+/*サイズの計算*/
+/*塗りつぶし系の色*/
+/*テキスト系デザイン*/
+/*--------------------------------------------
+ サイト全体
+--------------------------------------------*/
+/* line 42, ../sass/screen.scss */
+body {
+  background-color: F0EFF5;
+  font-family: "Hiragino Maru Gothic Pro";
 }
 
-/* line 19, ../sass/screen.scss */
-#newword {
-  font-family: serif;
-  font-size: 20px;
+/*--------------------------------------------
+ ヘッダー
+--------------------------------------------*/
+/* line 50, ../sass/screen.scss */
+div#header {
+  font-family: arial black;
+  font-size: 25px;
+  color: white;
+  background-color: 444545;
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+  width: 930px;
 }
+
+/*--------------------------------------------
+ 検索（サブヘッダー）
+--------------------------------------------*/
+/*--------------------------------------------
+ 左カラム
+--------------------------------------------*/
+/* line 71, ../sass/screen.scss */
+div#registered-words {
+  height: 600px;
+  width: 450px;
+  vertical-align: middle;
+  background-color: DFDED8;
+  border: 1px solid gray;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------------------
+ 右カラム
+--------------------------------------------*/

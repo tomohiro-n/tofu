@@ -4,54 +4,51 @@
 	<meta charset=utf-8>
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	</head>
+
+
 	<body onload="reloadRegistered();">
 		<script src="js/lib/jquery-2.1.0.min.js"></script>
 		<script src="js/lib/underscore-min.js"></script>
 		<script src="js/model/Word.js"></script>
 		<script src="js/main.js"></script>
 
+
+		<!-----ヘッダー---->
 		<div id ="header">
 			<h1 class = "title">tofu </h1>			
-
 		</div>
 
-		<section id="newword">
+		<!-----検索ー---->
+
+		<div id = "search_area">
+			<form action="javascript:searchWords()" method="get">
+			<label>単語検索</label>
+			<input type="text" id="search-word" >
+			<label>タグ検索</label>
+			<input type="text" id="search-tag">
+			<input type="submit" value="search"/>
+			</form>		
+		</div>
+
+		<!-----単語登録ー---->	
+		<div id="newword">
 			<form action="javascript:registerWord()" method="get">
-				<p>
-					<label>Word:</label>
-					<input type="text" id="word" required>
-				</p>
-				<p>
-					<label>Description:</label>
-					<input type="text" id="description" required>
-				</p>
-					<label>Tags(optional, space-separated)</label>
-					<input type="text" id="tags">
-				</p>
-				<p>
-					<input type="submit" value="Register"/>
-				</p>
+			<label>Word:</label>
+			<input type="text" id="word" required>
+			<label>Description:</label>
+			<input type="text" id="description" required>
+			<label>Tags(optional, space-separated)</label>
+			<input type="text" id="tags">
+			<input type="submit" value="Register"/>
 			</form>
-		</section>
-		<section>
-			<p>
-				<h1>Registered words:</h1>
-				<form action="javascript:searchWords()" method="get">
-					<p>
-						<label>Search with a part of the word:</label>
-						<input type="text" id="search-word">
-					</p>
-					<p>
-						<label>Search with a tag: </label>
-						<input type="text" id="search-tag">
-					</p>
-					<p>
-						<input type="submit" value="search"/>
-					</p>
-				</form>
-				<br/>
-				<div id="registered-words"></div>
-			</p>
-		</section>
+		</div>
+
+		<!-----単語表示　左カラムー---->
+		<div id="registered-words">
+		</div>
+
+		<!-----単語詳細表示＆編集　※まだ実装無し　右カラムー---->
+	
+		
 	</body>
 </html>

@@ -5,20 +5,81 @@
 
 @import "compass/reset";
 
-div#header{
-	font-family: arial black;
-	font-size: 30px;
-	color:white;
-	background-color: 444545;
-	height: 50px;
-	text-align:0,center;
-	text-indent: 200px;
-	padding-top:10;
+/*--------------------------------------------
+ 変数とか
+--------------------------------------------*/
+
+/*グリッドのパラメーター*/
+$column_left_grid_num: 15;
+$column_right_grid_num: 15;
+$column_between_grid_num: 1;
+$one_grid: 30px;
+
+/*総グリッド数*/
+$all_grid_partition_num: $column_left_grid_num + $column_right_grid_num + $column_between_grid_num;
+
+/*サイズの計算*/
+$container_width: $all_grid_partition_num * $one_grid;
+$column_left_width: $column_left_grid_num * $one_grid;
+$column_right_width: $column_left_grid_num * $one_grid;
+
+/*塗りつぶし系の色*/
+$bg_color:F0EFF5;
+$column_color: DFDED8;
+$header_color: 444545;
+$border_color: gray;
+
+/*テキスト系デザイン*/
+$header_text_color: white;
+$main_text_color: gray;
+$sub_text_color: light gray;
+$font:"Hiragino Maru Gothic Pro";
+
+
+/*--------------------------------------------
+ サイト全体
+--------------------------------------------*/
+body{
+	background-color: $bg_color;
+	font-family:$font;
 }
 
-#newword {
-	font-family: serif;
-	font-size: 20px;
+/*--------------------------------------------
+ ヘッダー
+--------------------------------------------*/
+div#header{
+	font-family: arial black;
+	font-size: 25px;
+	color:$header_text_color;
+	background-color: $header_color;
+	display: table-cell;
+	vertical-align: middle;
+	height: 50px;
+	width: $container_width;
 }
+
+/*--------------------------------------------
+ 検索（サブヘッダー）
+--------------------------------------------*/
+div#searcharea{
+	
+}
+
+/*--------------------------------------------
+ 左カラム
+--------------------------------------------*/
+div#registered-words{
+	height: 600px;
+	width: $column_left_width;
+	vertical-align: middle;
+	background-color: $column_color;
+	border:1px solid $border_color;
+	margin-top:10px;
+	text-align: center;
+}
+
+/*--------------------------------------------
+ 右カラム
+--------------------------------------------*/
 
 
