@@ -13,28 +13,28 @@
 		<script src="js/main.js"></script>
 
 
-		<!-----ヘッダー---->
+		<!-----headerー---->
 		<div id ="header">
 			<h1 class = "title">tofu </h1>			
 		</div>
 
-		<!-----検索ー----> 
+		<!-----searchー----> 
 
 		<div id = "search_area">
-			<!--単語検索-->
-			<form action="javascript:searchWords()" method="get" class="search_form" id= "search_word">
+			<!--word_search-->
+			<form action="javascript:searchWords()" method="get" class="search_form" id= "search_word" id="search-tag">
 			<input type="text" class="search_input" id="search-word" value="単語検索">
 			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />  
 			</form>
 
-			<!--タグ検索-->
+			<!--tag_search-->
 			<form action="javascript:searchWords()" method="get" class="search_form" id="search_tag">
 			<input type="text" class="search_input" id="search-tag" value="タグ検索">
 			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />
 			</form>		
 		</div>
 
-		<!-----単語登録ー---->	
+		<!-----add_new_wordー---->	
 		<div id="newword">
 			<form action="javascript:registerWord()" method="get">
 			<label>Word:</label>
@@ -47,18 +47,15 @@
 			</form>
 		</div>
 
-		<!-----単語表示　左カラムー---->
-		<div id="registered-words-list">
-		</div>
+		<!-----left_column show registerd wordsー---->
+		<div id="registered-words-list"></div>
 
-		<!-----単語詳細表示＆編集　※まだ実装無し　右カラムー---->
+		<!-----right columnー---->
 		<div id="registered-word-detail">
 			<div id="registered-word-tags">Word Tags</div>
 			<div id="registered-word-name">Word Name</div>
 			<label>-----------------</label>
 			<div id="registered-word-description">Word Description</div>
 		</div>
-	
-		
 	</body>
 </html>
