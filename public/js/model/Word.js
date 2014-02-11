@@ -1,5 +1,4 @@
-Tofu = {};
-Tofu.model = {};
+goog.provide('Tofu.model');
 
 Tofu.model.Word = function(word, description, tags) {
 	this.word = word;
