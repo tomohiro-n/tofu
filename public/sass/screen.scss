@@ -6,30 +6,30 @@
 @import "compass/reset";
 
 /*--------------------------------------------
- 変数とか
+ Parameters
 --------------------------------------------*/
 
-/*グリッドのパラメーター*/
+/*Grid Params*/
 $column_left_grid_num: 15;
 $column_right_grid_num: 15;
 $column_between_grid_num: 1;
 $one_grid: 30px;
 
-/*総グリッド数*/
+/*# of toal grids*/
 $all_grid_partition_num: $column_left_grid_num + $column_right_grid_num + $column_between_grid_num;
 
-/*サイズの計算*/
+/*size calculation*/
 $container_width: $all_grid_partition_num * $one_grid;
 $column_left_width: $column_left_grid_num * $one_grid;
 $column_right_width: $column_left_grid_num * $one_grid;
 
-/*塗りつぶし系の色*/
+/*fill color*/
 $bg_color:F0EFF5;
 $column_color: DFDED8;
 $header_color: 444545;
 $border_color: gray;
 
-/*テキスト系デザイン*/
+/*text related designs*/
 $header_text_color: white;
 $main_text_color: gray;
 $sub_text_color: light gray;
@@ -37,7 +37,7 @@ $font:"Hiragino Maru Gothic Pro";
 
 
 /*--------------------------------------------
- サイト全体
+ Overall
 --------------------------------------------*/
 html {
     overflow: auto;
@@ -53,7 +53,7 @@ body{
 }
 
 /*--------------------------------------------
- ヘッダー
+ Header
 --------------------------------------------*/
 #header{
 	display:block;
@@ -70,7 +70,7 @@ body{
 }
 
 /*--------------------------------------------
- 検索（サブヘッダー）
+ Search Area
 --------------------------------------------*/
 #search_area{
 	margin: 0 auto;
@@ -119,7 +119,7 @@ body{
 }
 
 /*--------------------------------------------
- 左カラム
+ Left Column
 --------------------------------------------*/
 div#registered-words{
 	height: 600px;
@@ -132,7 +132,7 @@ div#registered-words{
 }
 
 /*--------------------------------------------
- 右カラム
+ Right Column
 --------------------------------------------*/
 
 
