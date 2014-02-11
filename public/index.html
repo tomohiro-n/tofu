@@ -18,15 +18,19 @@
 			<h1 class = "title">tofu </h1>			
 		</div>
 
-		<!-----検索ー---->
+		<!-----検索ー----> 
 
 		<div id = "search_area">
-			<form action="javascript:searchWords()" method="get">
-			<label>単語検索</label>
-			<input type="text" id="search-word" >
-			<label>タグ検索</label>
-			<input type="text" id="search-tag">
-			<input type="submit" value="search"/>
+			<!--単語検索-->
+			<form action="javascript:searchWords()" method="get" class="search_form" id= "search_word">
+			<input type="text" class="search_input" id="search-word" value="単語検索">
+			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />  
+			</form>
+
+			<!--タグ検索-->
+			<form action="javascript:searchWords()" method="get" class="search_form" id="search_tag">
+			<input type="text" class="search_input" id="search-tag" value="タグ検索">
+			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />
 			</form>		
 		</div>
 

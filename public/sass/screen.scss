@@ -39,30 +39,83 @@ $font:"Hiragino Maru Gothic Pro";
 /*--------------------------------------------
  サイト全体
 --------------------------------------------*/
+html {
+    overflow: auto;
+}
+
 body{
 	background-color: $bg_color;
 	font-family:$font;
+	padding: 0 2em;
+    overflow-x: hidden;
+    position: relative;
+    min-width: 1000px;
 }
 
 /*--------------------------------------------
  ヘッダー
 --------------------------------------------*/
-div#header{
+#header{
+	display:block;
+	line-height:50px;
+	margin: 0 -500%; /* 上下のmarginは元の値に合わせて適宜変更 */
+    padding: 0 500%; 
+    position: relative;
+	height: 50px;
+	width: $container_width;
 	font-family: arial black;
 	font-size: 25px;
 	color:$header_text_color;
 	background-color: $header_color;
-	display: table-cell;
-	vertical-align: middle;
-	height: 50px;
-	width: $container_width;
 }
 
 /*--------------------------------------------
  検索（サブヘッダー）
 --------------------------------------------*/
-div#searcharea{
-	
+#search_area{
+	margin: 0 auto;
+	width:$container_width;
+	height: 50px;
+	position: relative;
+	background-color: gray;
+ 	-webkit-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+    -moz-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+    border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+}
+
+#search_area > .search_form{
+	width: 350px;  
+    background-color: white;
+    display: block;  
+    height: 26px;  
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 15px;
+    -webkit-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;    
+}
+
+.search_input{  
+    width: 300px;
+    height: 20px;
+    position: absolute;  
+    top: 2px;  
+    left: 1px;  
+    border: 1px solid #FFF; 
+    font-family:$font;
+    color: gray;
+}  
+#search_button {  
+    position: absolute;  
+    top: 4px;  
+    right:5px;  
+}
+
+#search_tag{
+	position:absolute;
+	left: 370px;
+
 }
 
 /*--------------------------------------------

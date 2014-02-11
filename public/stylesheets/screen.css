@@ -80,33 +80,97 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  サイト全体
 --------------------------------------------*/
 /* line 42, ../sass/screen.scss */
+html {
+  overflow: auto;
+}
+
+/* line 46, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
   font-family: "Hiragino Maru Gothic Pro";
+  padding: 0 2em;
+  overflow-x: hidden;
+  position: relative;
+  min-width: 1000px;
 }
 
 /*--------------------------------------------
  ヘッダー
 --------------------------------------------*/
-/* line 50, ../sass/screen.scss */
-div#header {
+/* line 58, ../sass/screen.scss */
+#header {
+  display: block;
+  line-height: 50px;
+  margin: 0 -500%;
+  /* 上下のmarginは元の値に合わせて適宜変更 */
+  padding: 0 500%;
+  position: relative;
+  height: 50px;
+  width: 930px;
   font-family: arial black;
   font-size: 25px;
   color: white;
   background-color: 444545;
-  display: table-cell;
-  vertical-align: middle;
-  height: 50px;
-  width: 930px;
 }
 
 /*--------------------------------------------
  検索（サブヘッダー）
 --------------------------------------------*/
+/* line 75, ../sass/screen.scss */
+#search_area {
+  margin: 0 auto;
+  width: 930px;
+  height: 50px;
+  position: relative;
+  background-color: gray;
+  -webkit-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+  -moz-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
+}
+
+/* line 86, ../sass/screen.scss */
+#search_area > .search_form {
+  width: 350px;
+  background-color: white;
+  display: block;
+  height: 26px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 15px;
+  -webkit-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
+}
+
+/* line 99, ../sass/screen.scss */
+.search_input {
+  width: 300px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  border: 1px solid #FFF;
+  font-family: "Hiragino Maru Gothic Pro";
+  color: gray;
+}
+
+/* line 109, ../sass/screen.scss */
+#search_button {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+}
+
+/* line 115, ../sass/screen.scss */
+#search_tag {
+  position: absolute;
+  left: 370px;
+}
+
 /*--------------------------------------------
  左カラム
 --------------------------------------------*/
-/* line 71, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 div#registered-words {
   height: 600px;
   width: 450px;
