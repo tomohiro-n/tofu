@@ -76,15 +76,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*size calculation*/
 /*fill color*/
 /*text related designs*/
+/* misc */
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 42, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
   font-family: "Hiragino Maru Gothic Pro";
@@ -97,7 +98,7 @@ body {
 /*--------------------------------------------
  Header
 --------------------------------------------*/
-/* line 58, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 #header {
   display: block;
   line-height: 50px;
@@ -116,8 +117,8 @@ body {
 /*--------------------------------------------
  Search Area
 --------------------------------------------*/
-/* line 75, ../sass/screen.scss */
-#search_area {
+/* line 80, ../sass/screen.scss */
+#search-area {
   margin: 0 auto;
   width: 930px;
   height: 50px;
@@ -128,8 +129,8 @@ body {
   border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
 }
 
-/* line 86, ../sass/screen.scss */
-#search_area > .search_form {
+/* line 91, ../sass/screen.scss */
+#search-area > .search_form {
   width: 350px;
   background-color: white;
   display: block;
@@ -142,7 +143,7 @@ body {
   border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .search_input {
   width: 300px;
   height: 20px;
@@ -154,23 +155,40 @@ body {
   color: gray;
 }
 
-/* line 109, ../sass/screen.scss */
-#search_button {
+/* line 115, ../sass/screen.scss */
+.search_button {
   position: absolute;
   top: 4px;
-  right: 5px;
 }
 
-/* line 115, ../sass/screen.scss */
-#search_tag {
+/* line 120, ../sass/screen.scss */
+#search_word_button {
   position: absolute;
-  left: 370px;
+  left: 310px;
+}
+
+/* line 125, ../sass/screen.scss */
+#search_tag_button {
+  position: absolute;
+  left: 680px;
+}
+
+/* line 130, ../sass/screen.scss */
+#search-word {
+  position: absolute;
+  left: 10px;
+}
+
+/* line 135, ../sass/screen.scss */
+#search-tag {
+  position: absolute;
+  left: 380px;
 }
 
 /*--------------------------------------------
  Left Column
 --------------------------------------------*/
-/* line 124, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 div#registered-words-list {
   height: 600px;
   width: 450px;
@@ -185,7 +203,7 @@ div#registered-words-list {
 /*--------------------------------------------
  Right Column
 --------------------------------------------*/
-/* line 139, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 div#registered-word-detail {
   height: 600px;
   width: 450px;

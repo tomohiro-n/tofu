@@ -29,13 +29,13 @@ Tofu.service.TofuService.registerWord = function() {
 	var desc = $("#description").val();
 	var tags = $("#tags").val().split(" ");
 	localStorage[word] = JSON.stringify(new Tofu.model.Word(word, desc, tags));
-	reloadRegistered();
+	Tofu.service.TofuService.reloadRegistered();
 };
 
 Tofu.service.TofuService.searchWords = function() {
 	var searchKey = $("#search-word").val();
 	var searchTag = $("#search-tag").val();
-	reloadRegistered(searchKey, searchTag);
+	Tofu.service.TofuService.reloadRegistered(searchKey, searchTag);
 };
 
 Tofu.service.TofuService.showWordDetail = function(wordName) {
