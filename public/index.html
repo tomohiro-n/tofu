@@ -14,7 +14,7 @@
 	<body onload="Tofu.service.TofuService.reloadRegistered();">
 		<!-----headerー---->
 		<div id ="header">
-			<h1 class = "title">tofu </h1>			
+			<h1 class = "title">tofu</h1>			
 		</div>
 
 		<!-----searchー----> 
@@ -33,14 +33,14 @@
 
 		<!-----add_new_wordー---->	
 		<div id="newword">
-			<form action="javascript:Tofu.service.TofuService.registerWord()" method="get">
-			<label>Word:</label>
-			<input type="text" id="word" required>
-			<label>Description:</label>
-			<input type="text" id="description" required>
-			<label>Tags(optional, space-separated)</label>
-			<input type="text" id="tags">
-			<input type="submit" value="Register"/>
+			<form action="javascript:Tofu.service.TofuService.registerNewWord()" method="get">
+				<label>Word:</label>
+				<input type="text" id="word" required>
+				<label>Description:</label>
+				<input type="text" id="description" required>
+				<label>Tags(optional, space-separated)</label>
+				<input type="text" id="tags">
+				<input type="submit" value="Register"/>
 			</form>
 		</div>
 
@@ -49,10 +49,12 @@
 
 		<!-----right columnー---->
 		<div id="registered-word-detail">
-			<div id="registered-word-tags">Word Tags</div>
-			<div id="registered-word-name">Word Name</div>
-			<label>-----------------</label>
-			<div id="registered-word-description">Word Description</div>
+			<form action="javascript:Tofu.service.TofuService.updateWord()" method="get">
+				<div id="registered-word-tags">Word Tags</div>
+				<div id="registered-word-name">Word Name</div>
+				<label>-----------------</label>
+				<div id="registered-word-description">Word Description</div>
+			</form>
 		</div>
 	</body>
 </html>
