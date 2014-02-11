@@ -121,9 +121,10 @@ body{
 /*--------------------------------------------
  左カラム
 --------------------------------------------*/
-div#registered-words{
+div#registered-words-list{
 	height: 600px;
 	width: $column_left_width;
+	float: left;
 	vertical-align: middle;
 	background-color: $column_color;
 	border:1px solid $border_color;
@@ -134,5 +135,16 @@ div#registered-words{
 /*--------------------------------------------
  右カラム
 --------------------------------------------*/
+
+div#registered-word-detail {
+	height: 600px;
+	width: $column_right_width;
+	float: right;
+	vertical-align: middle;
+	background-color: $column_color;
+	border:1px solid $border_color;
+	margin-top:10px;
+	text-align: center;
+}
 
 
