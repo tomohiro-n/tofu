@@ -37,9 +37,8 @@ $font:"Hiragino Maru Gothic Pro";
 
 
 /* misc */
-$search_input_width: 300px;
-$word_search_position: 10px;
-$tag_search_position: $word_search_position + 370px;
+$search_input_width: 320px;
+$search_input_height: 22px;
 
 /*--------------------------------------------
  Overall
@@ -62,11 +61,11 @@ body{
 --------------------------------------------*/
 #header{
 	display:block;
+	height: 50px;
 	line-height:50px;
 	margin: 0 -500%; /* 上下のmarginは元の値に合わせて適宜変更 */
     padding: 0 500%; 
     position: relative;
-	height: 50px;
 	width: $container_width;
 	font-family: arial black;
 	font-size: 25px;
@@ -103,7 +102,7 @@ body{
 
 .search_input{  
     width: $search_input_width;
-    height: 20px;
+    height: $search_input_height;
     position: absolute;  
     top: 2px;  
     left: 1px;  
@@ -112,36 +111,23 @@ body{
     color: gray;
 }  
 
- .search_button {  
+.search_button {  
     position: absolute;  
-    top: 4px;  
+    top: 4px; 
+    right:10px; 
 }
 
-#search_word_button {
-	position: absolute;
-	left: $word_search_position + $search_input_width;
-}
 
-#search_tag_button {
-	position: absolute;
-	left: $tag_search_position + $search_input_width;
-}
 
-#search-word{
-	position:absolute;
-	left: $word_search_position;
-}
-
-#search-tag{
-	position:absolute;
-	left: $tag_search_position;
-
-}
 
 /*--------------------------------------------
- Left Column
+Common for the columns
 --------------------------------------------*/
-div#registered-words-list{
+div.frame{
+	display: table;
+	margin:auto;
+}
+div#registered-words-list,div#registered-words-detail{
 	height: 600px;
 	width: $column_left_width;
 	float: left;
@@ -150,21 +136,12 @@ div#registered-words-list{
 	border:1px solid $border_color;
 	margin-top:10px;
 	text-align: center;
+	display: table-cell;
 }
 
 /*--------------------------------------------
  Right Column
 --------------------------------------------*/
 
-div#registered-word-detail {
-	height: 600px;
-	width: $column_right_width;
-	float: right;
-	vertical-align: middle;
-	background-color: $column_color;
-	border:1px solid $border_color;
-	margin-top:10px;
-	text-align: center;
-}
 
 

@@ -3,7 +3,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -80,12 +80,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 47, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
   font-family: "Hiragino Maru Gothic Pro";
@@ -98,15 +98,15 @@ body {
 /*--------------------------------------------
  Header
 --------------------------------------------*/
-/* line 63, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 #header {
   display: block;
+  height: 50px;
   line-height: 50px;
   margin: 0 -500%;
   /* 上下のmarginは元の値に合わせて適宜変更 */
   padding: 0 500%;
   position: relative;
-  height: 50px;
   width: 930px;
   font-family: arial black;
   font-size: 25px;
@@ -117,7 +117,7 @@ body {
 /*--------------------------------------------
  Search Area
 --------------------------------------------*/
-/* line 80, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 #search-area {
   margin: 0 auto;
   width: 930px;
@@ -129,7 +129,7 @@ body {
   border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 #search-area > .search_form {
   width: 350px;
   background-color: white;
@@ -143,10 +143,10 @@ body {
   border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
 }
 
-/* line 104, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .search_input {
-  width: 300px;
-  height: 20px;
+  width: 320px;
+  height: 22px;
   position: absolute;
   top: 2px;
   left: 1px;
@@ -155,41 +155,24 @@ body {
   color: gray;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .search_button {
   position: absolute;
   top: 4px;
-}
-
-/* line 120, ../sass/screen.scss */
-#search_word_button {
-  position: absolute;
-  left: 310px;
-}
-
-/* line 125, ../sass/screen.scss */
-#search_tag_button {
-  position: absolute;
-  left: 680px;
-}
-
-/* line 130, ../sass/screen.scss */
-#search-word {
-  position: absolute;
-  left: 10px;
-}
-
-/* line 135, ../sass/screen.scss */
-#search-tag {
-  position: absolute;
-  left: 380px;
+  right: 10px;
 }
 
 /*--------------------------------------------
- Left Column
+Common for the columns
 --------------------------------------------*/
-/* line 144, ../sass/screen.scss */
-div#registered-words-list {
+/* line 126, ../sass/screen.scss */
+div.frame {
+  display: table;
+  margin: auto;
+}
+
+/* line 130, ../sass/screen.scss */
+div#registered-words-list, div#registered-words-detail {
   height: 600px;
   width: 450px;
   float: left;
@@ -198,19 +181,9 @@ div#registered-words-list {
   border: 1px solid gray;
   margin-top: 10px;
   text-align: center;
+  display: table-cell;
 }
 
 /*--------------------------------------------
  Right Column
 --------------------------------------------*/
-/* line 159, ../sass/screen.scss */
-div#registered-word-detail {
-  height: 600px;
-  width: 450px;
-  float: right;
-  vertical-align: middle;
-  background-color: DFDED8;
-  border: 1px solid gray;
-  margin-top: 10px;
-  text-align: center;
-}
