@@ -12,11 +12,10 @@
 /*Grid Params*/
 $column_left_grid_num: 15;
 $column_right_grid_num: 15;
-$column_between_grid_num: 1;
 $one_grid: 30px;
 
 /*# of toal grids*/
-$all_grid_partition_num: $column_left_grid_num + $column_right_grid_num + $column_between_grid_num;
+$all_grid_partition_num: $column_left_grid_num + $column_right_grid_num;
 
 /*size calculation*/
 $container_width: $all_grid_partition_num * $one_grid;
@@ -27,13 +26,13 @@ $column_right_width: $column_left_grid_num * $one_grid;
 $bg_color:F0EFF5;
 $column_color: DFDED8;
 $header_color: 444545;
-$border_color: gray;
+$border_color: C5C5C5;
 
 /*text related designs*/
 $header_text_color: white;
 $main_text_color: gray;
 $sub_text_color: light gray;
-$font:"Hiragino Maru Gothic Pro";
+$font:'Roboto',Meiryo, メイリオ;
 
 
 /* misc */
@@ -53,7 +52,6 @@ body{
 	padding: 0 2em;
     overflow-x: hidden;
     position: relative;
-    min-width: 1000px;
 }
 
 /*--------------------------------------------
@@ -117,9 +115,6 @@ body{
     right:10px; 
 }
 
-
-
-
 /*--------------------------------------------
 Common for the columns
 --------------------------------------------*/
@@ -139,9 +134,11 @@ div#registered-words-list,div#registered-words-detail{
 	display: table-cell;
 }
 
-/*--------------------------------------------
- Right Column
---------------------------------------------*/
-
-
+footer{
+	display: table;
+	margin:auto;
+	height: 50px;
+	line-height:50px;
+	color: $main_text_color;
+}
 
