@@ -36,6 +36,11 @@ $sub_text_color: light gray;
 $font:"Hiragino Maru Gothic Pro";
 
 
+/* misc */
+$search_input_width: 300px;
+$word_search_position: 10px;
+$tag_search_position: $word_search_position + 370px;
+
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
@@ -72,7 +77,7 @@ body{
 /*--------------------------------------------
  Search Area
 --------------------------------------------*/
-#search_area{
+#search-area{
 	margin: 0 auto;
 	width:$container_width;
 	height: 50px;
@@ -83,7 +88,7 @@ body{
     border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
 }
 
-#search_area > .search_form{
+#search-area > .search_form{
 	width: 350px;  
     background-color: white;
     display: block;  
@@ -97,7 +102,7 @@ body{
 }
 
 .search_input{  
-    width: 300px;
+    width: $search_input_width;
     height: 20px;
     position: absolute;  
     top: 2px;  
@@ -106,24 +111,40 @@ body{
     font-family:$font;
     color: gray;
 }  
-#search_button {  
+
+ .search_button {  
     position: absolute;  
     top: 4px;  
-    right:5px;  
 }
 
-#search_tag{
+#search_word_button {
+	position: absolute;
+	left: $word_search_position + $search_input_width;
+}
+
+#search_tag_button {
+	position: absolute;
+	left: $tag_search_position + $search_input_width;
+}
+
+#search-word{
 	position:absolute;
-	left: 370px;
+	left: $word_search_position;
+}
+
+#search-tag{
+	position:absolute;
+	left: $tag_search_position;
 
 }
 
 /*--------------------------------------------
  Left Column
 --------------------------------------------*/
-div#registered-words{
+div#registered-words-list{
 	height: 600px;
 	width: $column_left_width;
+	float: left;
 	vertical-align: middle;
 	background-color: $column_color;
 	border:1px solid $border_color;
@@ -134,5 +155,16 @@ div#registered-words{
 /*--------------------------------------------
  Right Column
 --------------------------------------------*/
+
+div#registered-word-detail {
+	height: 600px;
+	width: $column_right_width;
+	float: right;
+	vertical-align: middle;
+	background-color: $column_color;
+	border:1px solid $border_color;
+	margin-top:10px;
+	text-align: center;
+}
 
 

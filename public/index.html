@@ -5,54 +5,56 @@
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	</head>
 
+	<script src="js/lib/closure-library/closure/goog/base.js"></script>
+	<script src="js/lib/jquery-2.1.0.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/model/Word.js"></script>
+	<script src="js/service/TofuService.js"></script>
 
-	<body onload="reloadRegistered();">
-		<script src="js/lib/jquery-2.1.0.min.js"></script>
-		<script src="js/lib/underscore-min.js"></script>
-		<script src="js/model/Word.js"></script>
-		<script src="js/main.js"></script>
-
-
+	<body onload="Tofu.service.TofuService.reloadRegistered();">
 		<!-----headerー---->
 		<div id ="header">
-			<h1 class = "title">tofu </h1>			
+			<h1 class = "title">tofu</h1>			
 		</div>
 
 		<!-----searchー----> 
 
-		<div id = "search_area">
+		<div id="search-area">
 			<!--word_search-->
-			<form action="javascript:searchWords()" method="get" class="search_form" id= "search_word" id="search-tag">
-			<input type="text" class="search_input" id="search-word" value="単語検索">
-			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />  
-			</form>
+			<form action="javascript:Tofu.service.TofuService.searchWords()" method="get" class="search_form">
+				<input type="text" class="search_input" id="search-word" value="単語検索">
+				<input type="image" src="images/btn_search.gif" alt="検索" class="search_button" id="search_word_button" />
 
-			<!--tag_search-->
-			<form action="javascript:searchWords()" method="get" class="search_form" id="search_tag">
-			<input type="text" class="search_input" id="search-tag" value="タグ検索">
-			<input type="image" src="images/btn_search.gif" alt="検索" name="search_button" id="search_button" />
+				<!--tag_search-->
+				<input type="text" class="search_input" id="search-tag" value="タグ検索">
+				<input type="image" src="images/btn_search.gif" alt="検索" class="search_button" id="search_tag_button" />
 			</form>		
 		</div>
 
 		<!-----add_new_wordー---->	
 		<div id="newword">
-			<form action="javascript:registerWord()" method="get">
-			<label>Word:</label>
-			<input type="text" id="word" required>
-			<label>Description:</label>
-			<input type="text" id="description" required>
-			<label>Tags(optional, space-separated)</label>
-			<input type="text" id="tags">
-			<input type="submit" value="Register"/>
+			<form action="javascript:Tofu.service.TofuService.registerNewWord()" method="get">
+				<label>Word:</label>
+				<input type="text" id="word" required>
+				<label>Description:</label>
+				<input type="text" id="description" required>
+				<label>Tags(optional, space-separated)</label>
+				<input type="text" id="tags">
+				<input type="submit" value="Register"/>
 			</form>
 		</div>
 
 		<!-----left_column show registerd wordsー---->
-		<div id="registered-words">
-		</div>
+		<div id="registered-words-list"></div>
 
 		<!-----right columnー---->
-	
-		
+		<div id="registered-word-detail">
+			<form action="javascript:Tofu.service.TofuService.updateWord()" method="get">
+				<div id="registered-word-tags">Word Tags</div>
+				<div id="registered-word-name">Word Name</div>
+				<label>-----------------</label>
+				<div id="registered-word-description">Word Description</div>
+			</form>
+		</div>
 	</body>
 </html>
