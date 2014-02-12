@@ -18,11 +18,12 @@
 		</div>
 
 		<!-----searchー----> 
+
 		<div id="search-area">
 			<!--word_search-->
 			<form action="javascript:Tofu.service.TofuService.searchWords()" method="get" class="search_form">
-				<input type="text" class="search_input" value="単語検索">
-				<input type="image" src="images/btn_search.gif" alt="検索" class="search_button" />
+				<input type="text" class="search_input" id="search-word" value="単語検索">
+				<input type="image" src="images/btn_search.gif" alt="検索" class="search_button" id="search_word_button" />
 
 			</form>		
 		</div>
@@ -43,7 +44,8 @@
 		
 		<div class = "frame">
 		<!-----left_column show registerd wordsー---->
-		<div id="registered-words-list"></div>
+		<div id="registered-words-list">
+		</div>
 
 		<!-----right columnー---->
 		<div id="registered-words-detail">
@@ -55,6 +57,10 @@
 			</form>
 		</div>
 		</div>
+
+		<footer id ="footer">
+		Copyright 2014 Tofu Team. All rights reserved.
+		</footer>
 
 	</body>
 </html>

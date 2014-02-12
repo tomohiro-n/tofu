@@ -80,25 +80,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 46, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
-  font-family: "Hiragino Maru Gothic Pro";
+  font-family: "Roboto", Meiryo, メイリオ;
   padding: 0 2em;
   overflow-x: hidden;
   position: relative;
-  min-width: 1000px;
 }
 
 /*--------------------------------------------
  Header
 --------------------------------------------*/
-/* line 62, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 #header {
   display: block;
   height: 50px;
@@ -107,7 +106,7 @@ body {
   /* 上下のmarginは元の値に合わせて適宜変更 */
   padding: 0 500%;
   position: relative;
-  width: 930px;
+  width: 900px;
   font-family: arial black;
   font-size: 25px;
   color: white;
@@ -117,10 +116,10 @@ body {
 /*--------------------------------------------
  Search Area
 --------------------------------------------*/
-/* line 79, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 #search-area {
   margin: 0 auto;
-  width: 930px;
+  width: 900px;
   height: 50px;
   position: relative;
   background-color: gray;
@@ -129,7 +128,7 @@ body {
   border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 #search-area > .search_form {
   width: 350px;
   background-color: white;
@@ -143,7 +142,7 @@ body {
   border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .search_input {
   width: 320px;
   height: 22px;
@@ -151,11 +150,11 @@ body {
   top: 2px;
   left: 1px;
   border: 1px solid #FFF;
-  font-family: "Hiragino Maru Gothic Pro";
+  font-family: "Roboto", Meiryo, メイリオ;
   color: gray;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .search_button {
   position: absolute;
   top: 4px;
@@ -165,25 +164,30 @@ body {
 /*--------------------------------------------
 Common for the columns
 --------------------------------------------*/
-/* line 126, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 div.frame {
   display: table;
   margin: auto;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 div#registered-words-list, div#registered-words-detail {
   height: 600px;
   width: 450px;
   float: left;
   vertical-align: middle;
   background-color: DFDED8;
-  border: 1px solid gray;
+  border: 1px solid C5C5C5;
   margin-top: 10px;
   text-align: center;
   display: table-cell;
 }
 
-/*--------------------------------------------
- Right Column
---------------------------------------------*/
+/* line 137, ../sass/screen.scss */
+footer {
+  display: table;
+  margin: auto;
+  height: 50px;
+  line-height: 50px;
+  color: gray;
+}
