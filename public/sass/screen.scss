@@ -132,6 +132,10 @@ div#registered-words-list,div#registered-words-detail{
 	margin-top:10px;
 	text-align: center;
 	display: table-cell;
+	overflow-y:scroll;
+  	top:0px;
+  	left:0px;
+
 }
 
 footer{
