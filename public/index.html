@@ -26,47 +26,42 @@
 
 		<div id="search-area">
 			<!--word_search-->
-			<input ng-model="query" value="Search">
+			<input ng-model="query" placeholder="Search">
 			</form>		
 		</div>
 
-				<!--tag_search
-				<input type="text" class="search_input" id="search-tag" value="タグ検索">
-				<input type="image" src="images/btn_search.gif" alt="検索" class="search_button" id="search_tag_button" />
-				-->
-
-	
-
-		<!-----add_new_wordー---->	
-		<div id="newword">
-			<form action="javascript:Tofu.service.TofuService.registerNewWord()" method="get">
-				<label>Word:</label>
-				<input type="text" id="word" required>
-				<label>Description:</label>
-				<input type="text" id="description" required>
-				<label>Tags(optional, space-separated)</label>
-				<input type="text" id="tags">
-				<input type="submit" value="Register"/>
-			</form>
-		</div>
+		<!-----add_new_wordー---->
+		<div ng-controller="tofuController">
+			<div id="newword">
+				<form ng-submit="registerNewWord()">
+					<label>Word:</label>
+					<input type="text" ng-model="newWord" required>
+					<label>Description:</label>
+					<input type="text" ng-model="newWordDescription" required>
+					<label>Tags(optional, space-separated)</label>
+					<input type="text" ng-model="newWordTags">
+					<input type="submit" value="Register"/>
+				</form>
+			</div>
 
 		
-		<div class = "frame">
-		<!-----left_column show registerd wordsー---->
-			<ul id="registered-words-list" ng-controller="tofuController">
-				<li ng-repeat="word in words | filter:query">
-					{{word.word}}: {{word.description}} (tags: {{word.tags}})
-				</li>
-			</ul>
+			<div class = "frame">
+				<!-----left_column show registerd wordsー---->
+				<ul id="registered-words-list">
+					<li ng-repeat="word in words | filter:query">
+						{{word.word}}: {{word.description}} (tags: {{word.tags}})
+					</li>
+				</ul>
 
-		<!-----right columnー---->
-			<div id="registered-words-detail">
-				<form action="javascript:Tofu.service.TofuService.updateWord()" method="get">
-					<div id="registered-word-tags">Word Tags</div>
-					<div id="registered-word-name">Word Name</div>
-					<label>-----------------</label>
-					<div id="registered-word-description">Word Description</div>
-				</form>
+				<!-----right columnー---->
+				<div id="registered-words-detail">
+					<form action="javascript:Tofu.service.TofuService.updateWord()" method="get">
+						<div id="registered-word-tags">Word Tags</div>
+						<div id="registered-word-name">Word Name</div>
+						<label>-----------------</label>
+						<div id="registered-word-description">Word Description</div>
+					</form>
+				</div>
 			</div>
 		</div>
 

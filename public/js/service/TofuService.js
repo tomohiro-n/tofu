@@ -7,14 +7,18 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	for(var key in localStorage) {
 		if (key != undefined) $scope.words.push(JSON.parse(localStorage[key]));
 	}
-});
 
-Tofu.service.TofuService.registerNewWord = function() {
-	var word = $("#word").val();
-	var desc = $("#description").val();
-	var tags = $("#tags").val().split(" ");
-	Tofu.service.TofuService.registerWord(word, desc, tags);
-};
+	$scope.registerNewWord = function() {
+		var tags = $scope.newWordTags.split(" ");
+		var word = new Tofu.model.Word($scope.newWord, $scope.newWordDescription, tags);
+		localStorage[$scope.newWord] = JSON.stringify(word);
+		$scope.words.push(word);
+
+		$scope.newWord = '';
+		$scope.newWordDescription = '';
+		$scope.newWordTags = '';
+	};
+});
 
 Tofu.service.TofuService.updateWord = function() {
 	var word = $("#registered-word-name").text();
@@ -25,6 +29,7 @@ Tofu.service.TofuService.updateWord = function() {
 
 Tofu.service.TofuService.registerWord = function(word, desc, tags) {
 	localStorage[word] = JSON.stringify(new Tofu.model.Word(word, desc, tags));
+
 };
 
 Tofu.service.TofuService.showWordDetail = function(wordName) {
