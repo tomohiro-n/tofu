@@ -1,28 +1,13 @@
 goog.provide('Tofu.service');
 
-Tofu.service.TofuService = function() {
+Tofu.service.TofuService = angular.module('tofuControllers', []);
 
-};
-
-Tofu.service.TofuService.reloadRegistered = function(searchKey, searchTag) {
-	var registeredWordsDom = $('#registered-words-list');
-	registeredWordsDom.html('');
-	var i = 1;
-	for (var key in localStorage) {
-		if (searchKey &&
-			!key.match(new RegExp('^.*' + searchKey + '.*$'))) continue;
-		var data = JSON.parse(localStorage[key]);
-		if (searchTag && !_.contains(data.tags, searchTag)) continue;
-		var divTag = "word-" + i;
-		var appendHtml = '<p><span id="' + divTag + '">' +
-			key + ': ' + data.description +
-			' (tags: ' + data.tags + ')' +
-			'</span></p>';
-		registeredWordsDom.append(appendHtml);
-		$('#' + divTag).click(key, function(key) {Tofu.service.TofuService.showWordDetail(key);});
-		i++;
+Tofu.service.TofuService.controller('tofuController', function($scope) {
+	$scope.words = [];
+	for(var key in localStorage) {
+		if (key != undefined) $scope.words.push(JSON.parse(localStorage[key]));
 	}
-};
+});
 
 Tofu.service.TofuService.registerNewWord = function() {
 	var word = $("#word").val();
@@ -40,13 +25,6 @@ Tofu.service.TofuService.updateWord = function() {
 
 Tofu.service.TofuService.registerWord = function(word, desc, tags) {
 	localStorage[word] = JSON.stringify(new Tofu.model.Word(word, desc, tags));
-	Tofu.service.TofuService.reloadRegistered();
-};
-
-Tofu.service.TofuService.searchWords = function() {
-	var searchKey = $("#search-word").val();
-	var searchTag = $("#search-tag").val();
-	Tofu.service.TofuService.reloadRegistered(searchKey, searchTag);
 };
 
 Tofu.service.TofuService.showWordDetail = function(wordName) {
