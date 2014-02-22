@@ -32,7 +32,7 @@
 
 		<!-----add_new_wordー---->
 		<div ng-controller="tofuController">
-			<div id="newword">
+			<div id="newWord">
 				<form ng-submit="registerNewWord()">
 					<label>Word:</label>
 					<input type="text" ng-model="newWord" required>
@@ -49,17 +49,18 @@
 				<!-----left_column show registerd wordsー---->
 				<ul id="registered-words-list">
 					<li ng-repeat="word in words | filter:query">
-						{{word.word}}: {{word.description}} (tags: {{word.tags}})
+						<div ng-click="showWordDetail(word)">{{word.word}}: {{word.description}} (tags: {{word.tags}})</div>
 					</li>
 				</ul>
 
 				<!-----right columnー---->
 				<div id="registered-words-detail">
-					<form action="javascript:Tofu.service.TofuService.updateWord()" method="get">
-						<div id="registered-word-tags">Word Tags</div>
-						<div id="registered-word-name">Word Name</div>
-						<label>-----------------</label>
-						<div id="registered-word-description">Word Description</div>
+					<form ng-submit="updateWord()">
+						<input type="text" ng-model="registeredWordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Tags"><br/>
+						<input type="text" ng-model="registeredWordName" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Name"><br/>
+						<label>-----------------</label><br/>
+						<input type="text" ng-model="registeredWordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Description"><br/>
+						<input type="submit" value="Update"/>
 					</form>
 				</div>
 			</div>
