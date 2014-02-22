@@ -11,7 +11,7 @@
 	<script src="js/lib/underscore-min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
-	<script src="js/lib/ui-bootstrap-0.10.0.js"></script>
+	<script src="js/lib/ui-bootstrap-tpls-0.10.0.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/model/Word.js"></script>
 	<script src="js/service/TofuService.js"></script>
@@ -49,7 +49,7 @@
 				<!-----left_column show registerd wordsー---->
 				<ul id="registered-words-list">
 					<li ng-repeat="word in words | filter:query">
-						<div ng-click="showWordDetail(word)">{{word.word}}: {{word.description}} (tags: {{word.tags}})</div>
+						<div ng-click="showWordDetail(word)"><a href="#" tooltip="{{word.word}}">{{word.word}}</a>: {{word.description}} (tags: {{word.tags}})</div>
 					</li>
 				</ul>
 
