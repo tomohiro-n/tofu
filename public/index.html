@@ -34,17 +34,10 @@
 		<div ng-controller="tofuController">
 			<div id="newWord">
 				<form ng-submit="registerNewWord()">
-					<label>Word:</label>
-					<input type="text" ng-model="newWord" required>
-					<label>Description:</label>
-					<input type="text" ng-model="newWordDescription" required>
-					<label>Tags(optional, space-separated)</label>
-					<input type="text" ng-model="newWordTags">
-					<input type="submit" value="Register"/>
+					<input type="submit" value="Register new word"/>
 				</form>
 			</div>
 
-		
 			<div class = "frame">
 				<!-----left_column show registerd wordsー---->
 				<ul id="registered-words-list">
@@ -55,11 +48,11 @@
 
 				<!-----right columnー---->
 				<div id="registered-words-detail">
-					<form ng-submit="updateWord()">
-						<input type="text" ng-model="registeredWordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Tags"><br/>
-						<input type="text" ng-model="registeredWordName" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Name"><br/>
+					<form ng-submit="registerWord()">
+						<input type="text" ng-model="wordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Tags"><br/>
+						<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
 						<label>-----------------</label><br/>
-						<input type="text" ng-model="registeredWordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Description"><br/>
+						<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
 						<input type="submit" value="Update"/>
 					</form>
 				</div>
