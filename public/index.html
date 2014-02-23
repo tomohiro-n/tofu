@@ -24,14 +24,48 @@
 
 		<!-----searchー----> 
 
-		<div id="search-area">
-			<!--word_search-->
-			<input ng-model="query" placeholder="Search">
-			</form>		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12" style="background:gray;"> 	
+					<input ng-model="query" placeholder="Search"></form>	
+				</div>
+			</div>
 		</div>
 
-		<!-----add_new_wordー---->
+		<!-----columnsー----> 
 		<div ng-controller="tofuController">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6" style="background:lightgray;">
+					<ul id="registered-words-list">
+						<li ng-repeat="word in words | filter:query">
+							<div ng-click="showWordDetail(word)"><a href="#" tooltip="{{word.word}}">{{word.word}}</a>: {{word.description}} (tags: {{word.tags}})</div>
+						</li>
+					</ul> 
+				</div>
+
+				<div class="col-sm-6" style="background:lightgray;">
+					<div id="registered-words-detail">
+					<form ng-submit="updateWord()">
+						<input type="text" ng-model="registeredWordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Tags"><br/>
+						<input type="text" ng-model="registeredWordName" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Name"><br/>
+						<label>-----------------</label><br/>
+						<input type="text" ng-model="registeredWordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Description"><br/>
+						<input type="submit" value="Update"/>
+					</form>
+				</div>
+
+				</div>
+			</div>
+		</div>
+
+
+			<!--word_search-->
+			
+		
+
+		<!-----add_new_wordー---->
+		
 			<div id="newWord">
 				<form ng-submit="registerNewWord()">
 					<label>Word:</label>
@@ -44,29 +78,9 @@
 				</form>
 			</div>
 
-		
-			<div class = "frame">
-				<!-----left_column show registerd wordsー---->
-				<ul id="registered-words-list">
-					<li ng-repeat="word in words | filter:query">
-						<div ng-click="showWordDetail(word)"><a href="#" tooltip="{{word.word}}">{{word.word}}</a>: {{word.description}} (tags: {{word.tags}})</div>
-					</li>
-				</ul>
-
-				<!-----right columnー---->
-				<div id="registered-words-detail">
-					<form ng-submit="updateWord()">
-						<input type="text" ng-model="registeredWordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Tags"><br/>
-						<input type="text" ng-model="registeredWordName" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Name"><br/>
-						<label>-----------------</label><br/>
-						<input type="text" ng-model="registeredWordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="editMode()" placeholder="Word Description"><br/>
-						<input type="submit" value="Update"/>
-					</form>
-				</div>
-			</div>
 		</div>
 
-		<footer id ="footer">
+		<footer class ="footer">
 		Copyright 2014 Tofu Team. All rights reserved.
 		</footer>
 

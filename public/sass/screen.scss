@@ -140,11 +140,32 @@ div#registered-words-list,div#registered-words-detail{
 
 }
 
-footer{
+.footer{
 	display: table;
 	margin:auto;
 	height: 50px;
 	line-height:50px;
 	color: $main_text_color;
 }
+
+/*--------------------------------------------
+Common for the columns (new ver with Bootstrap)
+--------------------------------------------*/
+.row > .col-sm-6{
+	height: 600px;
+	vertical-align: middle;
+	background-color: $column_color;
+	border:1px solid $border_color;
+	margin-top:10px;
+	text-align: center;
+	display: table-cell;
+	overflow-y:scroll;
+  	top:0px;
+  	left:0px;
+}
+
+
+
+
+
 
