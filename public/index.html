@@ -49,7 +49,19 @@
 					<div class="col-sm-6" style="background:lightgray;">
 						<ul id="registered-words-list">
 							<li ng-repeat="word in words | filter:query">
-								<div ng-click="showWordDetail(word)"><a href="#" tooltip="{{word.word}}">{{word.word}}</a>: {{word.description}} (tags: {{word.tags}})</div>
+								<a href="#" tooltip="{{word.word}}">
+									<div ng-click="showWordDetail(word)" id="word-in-list">
+										<div id="word-name-in-list">
+											{{word.word}}
+										</div>
+										<div id="word-desc-in-list">
+											{{word.description}}
+										</div>
+										<div id="word-tags-in-list">
+											{{word.tags}}
+										</div>
+									</div>
+								</a>
 							</li>
 						</ul>
 					</div>

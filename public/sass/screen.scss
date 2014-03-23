@@ -15,6 +15,7 @@
 $column_left_grid_num: 15;
 $column_right_grid_num: 15;
 $one_grid: 30px;
+$height_per_word_in_list: 75px;
 
 /*# of toal grids*/
 $all_grid_partition_num: $column_left_grid_num + $column_right_grid_num;
@@ -26,6 +27,7 @@ $column_right_width: $column_left_grid_num * $one_grid;
 
 /*fill color*/
 $bg_color:F0EFF5;
+$bg_word_list_color: white;
 $column_color: DFDED8;
 $header_color: 444545;
 $search_nav_color: darkgray;
@@ -51,10 +53,15 @@ html {
 }
 
 body{
-	background-color: $bg_color;
-	font-family:$font;
-    overflow-x: hidden;
-    position: relative;
+  background-color: $bg_color;
+  font-family:$font;
+  padding: 0 2em;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+ 	color: black;
 }
 
 .header-nav{
@@ -63,6 +70,50 @@ body{
 
 .header-nav-search > .container > .row >.col-sm-12{
 	background-color: $search_nav_color;
+}
+
+/*--------------------------------------------
+ Left column
+--------------------------------------------*/
+
+div#word-in-list {
+  margin-top: 3px;
+  background-color: $bg_word_list_color;
+  float: left;
+  position: relative;
+  width: 100%;
+  height: $height_per_word_in_list;
+  text-align: left;
+  border-bottom: 1px solid #e6e6e6;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(230, 230, 230);
+  cursor: pointer !important;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div#word-name-in-list {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 150%;
+  height: $height_per_word_in_list * 3 / 10;
+}
+
+div#word-desc-in-list {
+  margin-top: 5px;
+  margin-left: 5px;
+  height: $height_per_word_in_list * 2 / 10;
+  color: gray;
+}
+
+div#word-tags-in-list {
+  margin-top: 5px;
+  margin-left: 5px;
+  line-height: $height_per_word_in_list * 3 / 10;
+  height: $height_per_word_in_list * 5 / 10;
+  color: green;
 }
 
 /*--------------------------------------------
