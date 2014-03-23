@@ -38,7 +38,7 @@ $font:'Roboto',Meiryo, メイリオ;
 
 
 /* misc */
-$search_input_width: 320px;
+$search_input_width: 320px;	
 $search_input_height: 22px;
 
 /*--------------------------------------------
@@ -59,94 +59,7 @@ body{
 /*--------------------------------------------
  Header
 --------------------------------------------*/
-#header{
-	display:block;
-	height: 50px;
-	line-height:50px;
-	margin: 0 -500%; /* 上下のmarginは元の値に合わせて適宜変更 */
-    padding: 0 500%; 
-    position: relative;
-	width: $container_width;
-	font-family: arial black;
-	font-size: 25px;
-	color:$header_text_color;
-	background-color: $header_color;
-}
 
-/*--------------------------------------------
- Search Area
---------------------------------------------*/
-#search-area{
-	margin: 0 auto;
-	width:$container_width;
-	height: 50px;
-	position: relative;
-	background-color: gray;
- 	-webkit-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
-    -moz-border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
-    border-radius: 0px 0px 6px 6px / 0px 0px 6px 6px;
-}
-
-#search-area > .search_form{
-	width: 350px;  
-    background-color: white;
-    display: block;  
-    height: 26px;  
-    position: absolute;
-    margin-top: 12px;
-    margin-left: 15px;
-    -webkit-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
-    -moz-border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;
-    border-radius: 6px 6px 6px 6px / 6px 6px 6px 6px;    
-}
-
-.search_input{  
-    width: $search_input_width;
-    height: $search_input_height;
-    position: absolute;  
-    top: 2px;  
-    left: 1px;  
-    border: 1px solid #FFF; 
-    font-family:$font;
-    color: gray;
-}  
-
-.search_button {  
-    position: absolute;  
-    top: 4px; 
-    right:10px; 
-}
-
-/*--------------------------------------------
-Common for the columns
---------------------------------------------*/
-div.frame{
-	display: table;
-	margin:auto;
-}
-div#registered-words-list,div#registered-words-detail{
-	height: 600px;
-	width: $column_left_width;
-	float: left;
-	vertical-align: middle;
-	background-color: $column_color;
-	border:1px solid $border_color;
-	margin-top:10px;
-	text-align: center;
-	display: table-cell;
-	overflow-y:scroll;
-  	top:0px;
-  	left:0px;
-
-}
-
-.footer{
-	display: table;
-	margin:auto;
-	height: 50px;
-	line-height:50px;
-	color: $main_text_color;
-}
 
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
