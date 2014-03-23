@@ -85,27 +85,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 47, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
   font-family: "Roboto", Meiryo, メイリオ;
-  padding: 0 2em;
   overflow-x: hidden;
   position: relative;
 }
 
-/*--------------------------------------------
- Header
---------------------------------------------*/
+/* line 60, ../sass/screen.scss */
+.header-nav {
+  background-color: 444545;
+}
+
+/* line 64, ../sass/screen.scss */
+.header-nav-search > .container > .row > .col-sm-12 {
+  background-color: darkgrey;
+}
+
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 67, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .row > .col-sm-6 {
   height: 600px;
   vertical-align: middle;

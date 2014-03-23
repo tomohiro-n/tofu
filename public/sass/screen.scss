@@ -28,7 +28,9 @@ $column_right_width: $column_left_grid_num * $one_grid;
 $bg_color:F0EFF5;
 $column_color: DFDED8;
 $header_color: 444545;
+$search_nav_color: darkgray;
 $border_color: C5C5C5;
+
 
 /*text related designs*/
 $header_text_color: white;
@@ -51,15 +53,17 @@ html {
 body{
 	background-color: $bg_color;
 	font-family:$font;
-	padding: 0 2em;
     overflow-x: hidden;
     position: relative;
 }
 
-/*--------------------------------------------
- Header
---------------------------------------------*/
+.header-nav{
+	background-color: $header_color;
+}
 
+.header-nav-search > .container > .row >.col-sm-12{
+	background-color: $search_nav_color;
+}
 
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
