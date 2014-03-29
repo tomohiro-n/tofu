@@ -83,40 +83,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 40, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 body {
   background-color: #e6e9e2;
   font-family: "Roboto", Meiryo, メイリオ;
-  padding: 0 2em;
   overflow-x: hidden;
   position: relative;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 a {
   color: black;
 }
 
-/* line 56, ../sass/screen.scss */
-.header-nav {
-  background-color: 444545;
+/* line 66, ../sass/screen.scss */
+.navbar {
+  box-shadow: inset 1px 0px 70px black;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #423b3f), color-stop(1, #0f0d0e), color-stop(1, #4f4654));
 }
 
-/* line 60, ../sass/screen.scss */
-.header-nav-search > .container > .row > .col-sm-12 {
-  background-color: darkgrey;
+/* line 73, ../sass/screen.scss */
+.header-nav-search .container .row .col-sm-12 {
+  box-shadow: inset 1px 0px 70px black;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #423b3f), color-stop(1, #0f0d0e), color-stop(1, #4f4654));
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-width: 1px;
-  box-shadow: darkgrey 2px 2px 5px;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .searchbox {
   width: 500px;
   border-radius: 5px;
@@ -127,7 +127,7 @@ a {
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 80, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 3px;
   background-color: white;
@@ -146,7 +146,7 @@ div#word-in-list {
   overflow-y: hidden;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 div#word-name-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -154,7 +154,7 @@ div#word-name-in-list {
   height: 22.5px;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 div#word-desc-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -162,7 +162,7 @@ div#word-desc-in-list {
   color: gray;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 div#word-tags-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -174,8 +174,8 @@ div#word-tags-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 123, ../sass/screen.scss */
-.row > .col-sm-6 {
+/* line 139, ../sass/screen.scss */
+.row .col-sm-6 {
   height: 600px;
   vertical-align: middle;
   background-color: DFDED8;
