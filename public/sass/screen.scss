@@ -120,40 +120,38 @@ div#word-in-list {
 }
 
 div#word-name-in-list {
-  margin-top: 5px;
-  margin-left: 5px;
+  left: 5px;
   font-size: 150%;
-  height: $height_per_word_in_list * 3 / 10;
+}
+
+div#word-time-in-list {
+  right: 5px;
+  float: right;
+  text-align: right;
+}
+
+div#word-list-latter-part {
+  position: relative;
 }
 
 div#word-desc-in-list {
-  margin-top: 5px;
-  margin-left: 5px;
-  height: $height_per_word_in_list * 2 / 10;
+  position: absolute;
+  left: 5px;
   color: gray;
 }
 
 div#word-tags-in-list {
-  margin-top: 5px;
-  margin-left: 5px;
-  line-height: $height_per_word_in_list * 3 / 10;
-  height: $height_per_word_in_list * 5 / 10;
+  position: absolute;
   color: green;
-}
-
-div#word-time-in-list {
-  margin-top: 5px;
-  margin-left: 5px;
-  height: $height_per_word_in_list;
-  float: right;
-  text-align: right;
+  top: $height_per_word_in_list * 30 / 75;
+  left: 5px;
 }
 
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
 .row{
-  .col-sm-6{
+  .outer{
 	height: 600px;
 	vertical-align: middle;
 	background-color: $column_color;
@@ -164,7 +162,7 @@ Common for the columns (new ver with Bootstrap)
 	overflow-y:scroll;
   	top:0px;
   	left:0px;
-  }    
+  }
 }
 
 
