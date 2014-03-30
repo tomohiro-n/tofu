@@ -16,6 +16,17 @@ $column_left_grid_num: 15;
 $column_right_grid_num: 15;
 $one_grid: 30px;
 $height_per_word_in_list: 75px;
+<<<<<<< HEAD
+=======
+
+/*# of toal grids*/
+$all_grid_partition_num: $column_left_grid_num + $column_right_grid_num;
+
+/*size calculation*/
+$container_width: $all_grid_partition_num * $one_grid;
+$column_left_width: $column_left_grid_num * $one_grid;
+$column_right_width: $column_left_grid_num * $one_grid;
+>>>>>>> aa2637625ca4a5ac1a4c49a262747987d0fcfcd1
 
 /*fill color*/
 $bg_color:rgb(230, 233, 226);
