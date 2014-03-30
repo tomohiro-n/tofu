@@ -116,7 +116,12 @@ a {
   border-bottom-width: 1px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
+.header-nav-search .btn {
+  margin-right: 100px;
+}
+
+/* line 89, ../sass/screen.scss */
 .searchbox {
   width: 500px;
   border-radius: 5px;
@@ -127,7 +132,7 @@ a {
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 95, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 3px;
   background-color: white;
@@ -146,7 +151,7 @@ div#word-in-list {
   overflow-y: hidden;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 div#word-name-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -154,7 +159,7 @@ div#word-name-in-list {
   height: 22.5px;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 div#word-desc-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -162,7 +167,7 @@ div#word-desc-in-list {
   color: gray;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 div#word-tags-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -174,7 +179,7 @@ div#word-tags-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 139, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .row .col-sm-6 {
   height: 600px;
   vertical-align: middle;
