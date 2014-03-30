@@ -27,18 +27,27 @@
 	 		</nav>
  		</div>
 
-		<!-----search nav ---->
+
+		<!-----search nav header---->
 		<div ng-controller="tofuController">
 
 			<div class = "header-nav-search">
 				<div class="container">
-					<div class="row">
-						<div class="col-sm-12" style="height:50px">
-				       		<input class="searchbox" ng-model="query" placeholder="Search">
-				       		</form>
+					<div class="row nav-search">
+						<div class="col-sm-12 nav-search" style="height:50px">
+				       		<!-----search bar start ---->
+				       		<form class="navbar-form navbar-left" role="search" placeholder="Search">
+				       			<div class="form-group">
+							   		<input type="text" class="form-control search-box" placeholder="Search" ng-model="query">
+							    </div>
+							</form>
+							<!-----search bar end---->
 
 							<form ng-submit="registerNewWord()">
-								<input type="submit" class="btn btn-success btn-large" value="Register new word"/>
+								<button type="submit" class="btn btn-success btn-large register-new-word"/>
+									<span class="glyphicon glyphicon-plus"></span> Add New Word
+								</button>
+
 							</form>
 						</div>
 				 	</div>
