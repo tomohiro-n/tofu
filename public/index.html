@@ -18,32 +18,33 @@
 	<script src="js/service/TofuService.js"></script>
 
 	<body>
-		<!-----headerー---->
-		<div class="header">
-			<div class="row">
-				<div class="col-sm-12" style="background:black;"> 
-				<h1 class = "title">tofu</h1>
-				</div>
-			</div>		
-		</div>
+		<!-----header navー---->
+		<div class="header-nav">
+	 		<nav class="navbar navbar-inverse">
+	      		<div class="navbar-header">
+	       		 	<a class="navbar-brand" href="">Tofu</a>
+	      		</div>
+	 		</nav>
+ 		</div>
 
-		<!-----searchー----> 
-
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12" style="background:gray;"> 	
-					<input ng-model="query" placeholder="Search"></form>	
-				</div>
-			</div>
-		</div>
-
-		<!-----columnsー----> 
+		<!-----search nav ---->
 		<div ng-controller="tofuController">
 
-			<form ng-submit="registerNewWord()">
-				<input type="submit" value="Register new word"/>
-			</form>
-
+			<div class = "header-nav-search">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+				       		<input class="searchbox" ng-model="query" placeholder="Search">
+				       		</form>
+								
+							<form ng-submit="registerNewWord()">
+								<input type="submit" value="Register new word"/>
+							</form>
+						</div>
+				 	</div>
+				</div>
+	 		</div>
+			
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6" style="background:lightgray;">

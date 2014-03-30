@@ -85,12 +85,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 body {
   background-color: F0EFF5;
   font-family: "Roboto", Meiryo, メイリオ;
@@ -99,18 +99,37 @@ body {
   position: relative;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 a {
   color: black;
 }
 
-/*--------------------------------------------
- Header
---------------------------------------------*/
+/* line 66, ../sass/screen.scss */
+.header-nav {
+  background-color: 444545;
+}
+
+/* line 70, ../sass/screen.scss */
+.header-nav-search > .container > .row > .col-sm-12 {
+  background-color: darkgrey;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-width: 1px;
+  box-shadow: darkgrey 2px 2px 10px;
+}
+
+/* line 77, ../sass/screen.scss */
+.searchbox {
+  width: 500px;
+  border-radius: 5px;
+  text-indent: 20px;
+  text-align: left;
+}
+
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 73, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 3px;
   background-color: white;
@@ -129,7 +148,7 @@ div#word-in-list {
   overflow-y: hidden;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 div#word-name-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -137,7 +156,7 @@ div#word-name-in-list {
   height: 22.5px;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 div#word-desc-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -145,7 +164,7 @@ div#word-desc-in-list {
   color: gray;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 div#word-tags-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -154,7 +173,7 @@ div#word-tags-in-list {
   color: green;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 div#word-time-in-list {
   margin-top: 5px;
   margin-left: 5px;
@@ -166,7 +185,7 @@ div#word-time-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 124, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .row > .col-sm-6 {
   height: 600px;
   vertical-align: middle;
