@@ -110,6 +110,14 @@ div#word-tags-in-list {
   color: green;
 }
 
+div#word-time-in-list {
+  margin-top: 5px;
+  margin-left: 5px;
+  height: $height_per_word_in_list;
+  float: right;
+  text-align: right;
+}
+
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/

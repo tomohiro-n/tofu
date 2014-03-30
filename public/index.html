@@ -7,6 +7,7 @@
 	</head>
 
 	<script src="js/lib/closure-library/closure/goog/base.js"></script>
+	<script src="js/lib/moment-with-langs.min.js"></script>
 	<script src="js/lib/jquery-2.1.0.min.js"></script>
 	<script src="js/lib/underscore-min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
@@ -57,7 +58,10 @@
 											{{word.description}}
 										</div>
 										<div id="word-tags-in-list">
-											{{word.tags}}
+											{{word.tags}} {{word.getUpdatedTime()}}
+										</div>
+										<div id="word-time-in-list">
+											{{word.getUpdatedTime()}}
 										</div>
 									</div>
 								</a>

@@ -7,7 +7,10 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	$scope.words = [];
 	$scope.wordReadOnlyMode = true;
 	for(var key in localStorage) {
-		if (key != undefined) $scope.words.push(JSON.parse(localStorage[key]));
+		if (key != undefined) {
+			var tmp = JSON.parse(localStorage[key]);
+			$scope.words.push(new Tofu.model.Word(tmp.word, tmp.description, tmp.tags, tmp.updatedTime));
+		}
 	}
 
 	$scope.registerWord = function() {
