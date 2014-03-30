@@ -47,38 +47,43 @@
 			
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6" style="background:lightgray;">
-						<ul id="registered-words-list">
-							<li ng-repeat="word in words | filter:query">
-								<a href="#" tooltip="{{word.word}}">
-									<div ng-click="showWordDetail(word)" id="word-in-list">
-										<div id="word-name-in-list">
-											{{word.word}}
+					<div class="col-sm-6 outer" style="background:lightgray;">
+							<ul id="registered-words-list">
+								<li ng-repeat="word in words | filter:query">
+									<a href="#" tooltip="{{word.word}}">
+										<div ng-click="showWordDetail(word)" id="word-in-list">
+											<div class="row">
+												<div class="col-sm-6" id="word-name-in-list">
+													{{word.word}}
+												</div>
+												<div class="col-sm-6" id="word-time-in-list">
+													{{word.getUpdatedTime()}}
+												</div>
+											</div>
+											<div id="word-list-latter-part">
+												<div id="word-desc-in-list">
+													{{word.description}}
+												</div>
+												<div id="word-tags-in-list">
+													{{word.tags}}
+												</div>
+											</div>
 										</div>
-										<div id="word-desc-in-list">
-											{{word.description}}
-										</div>
-										<div id="word-tags-in-list">
-											{{word.tags}} {{word.getUpdatedTime()}}
-										</div>
-										<div id="word-time-in-list">
-											{{word.getUpdatedTime()}}
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
+									</a>
+								</li>
+							</ul>
+						</div>
 
-					<div class="col-sm-6" style="background:lightgray;">
-						<div id="registered-words-detail">
-							<form ng-submit="registerWord()">
-								<input type="text" ng-model="wordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Tags"><br/>
-								<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
-								<label>-----------------</label><br/>
-								<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
-								<input type="submit" value="Update"/>
-							</form>
+						<div class="col-sm-6 outer" style="background:lightgray;">
+							<div id="registered-words-detail">
+								<form ng-submit="registerWord()">
+									<input type="text" ng-model="wordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Tags"><br/>
+									<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
+									<label>-----------------</label><br/>
+									<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
+									<input type="submit" value="Update"/>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
