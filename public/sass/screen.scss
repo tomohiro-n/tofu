@@ -14,7 +14,8 @@
 /*Grid Params*/
 $column_left_grid_num: 15;
 $column_right_grid_num: 15;
-$one_grid: 30px;$height_per_word_in_list: 75px;
+$one_grid: 30px;
+$height_per_word_in_list: 75px;
 
 /*# of toal grids*/
 $all_grid_partition_num: $column_left_grid_num + $column_right_grid_num;
