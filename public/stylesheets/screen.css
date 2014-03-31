@@ -83,12 +83,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 51, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 body {
   background-color: #e6e9e2;
   font-family: "Roboto", Meiryo, メイリオ;
@@ -96,42 +96,40 @@ body {
   position: relative;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 a {
   color: black;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .navbar {
-  box-shadow: inset 1px 0px 70px black;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #423b3f), color-stop(1, #0f0d0e), color-stop(1, #4f4654));
+  background-color: #4f5050;
+  border-bottom: 0px;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .header-nav-search .row {
   position: relative;
 }
-/* line 76, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .header-nav-search .nav-search {
-  box-shadow: inset 1px 0px 70px black;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #423b3f), color-stop(1, #0f0d0e), color-stop(1, #4f4654));
+  background-color: #8a8a8a;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-bottom-width: 1px;
 }
-/* line 83, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .header-nav-search .register-new-word {
   position: absolute;
   left: 86%;
   bottom: 10px;
 }
-/* line 89, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .header-nav-search .search-box {
   width: 560px;
   margin-left: -20px;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .searchbox {
   width: 500px;
   border-radius: 5px;
@@ -142,7 +140,7 @@ a {
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 107, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 3px;
   background-color: white;
@@ -161,32 +159,32 @@ div#word-in-list {
   overflow-y: hidden;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 div#word-name-in-list {
   left: 5px;
   font-size: 150%;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 div#word-time-in-list {
   right: 5px;
   float: right;
   text-align: right;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 div#word-list-latter-part {
   position: relative;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 div#word-desc-in-list {
   position: absolute;
   left: 5px;
   color: gray;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 div#word-tags-in-list {
   position: absolute;
   color: green;
@@ -197,7 +195,7 @@ div#word-tags-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 157, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .row .outer {
   height: 600px;
   vertical-align: middle;
