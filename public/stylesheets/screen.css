@@ -185,16 +185,16 @@ div#word-in-list div#word-list-latter-part {
 /* line 162, ../sass/screen.scss */
 div#word-in-list div#word-desc-in-list {
   position: absolute;
-  top: 12px;
+  top: 12.5px;
   left: 10px;
   color: gray;
-  font-size: 85%;
+  font-size: 80%;
 }
 /* line 170, ../sass/screen.scss */
 div#word-in-list div#word-tags-in-list {
   position: absolute;
   color: green;
-  top: 38px;
+  top: 42.5px;
   left: 10px;
   font-size: 70%;
   font-color: green;
