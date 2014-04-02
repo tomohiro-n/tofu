@@ -53,10 +53,12 @@
 				 	</div>
 				</div>
 	 		</div>
-			
+
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 outer" style="background:lightgray;">
+					<div class="col-sm-6 outer left-pane" style="background:lightgray;">
+						<div class="col-sm-12 outer left-pane-header">All Words
+						</div>
 							<ul id="registered-words-list">
 								<li ng-repeat="word in words | filter:query">
 									<a href="#" tooltip="{{word.word}}">
@@ -83,7 +85,7 @@
 							</ul>
 						</div>
 
-						<div class="col-sm-6 outer" style="background:lightgray;">
+						<div class="col-sm-6 outer right-pane" style="background:lightgray;">
 							<div id="registered-words-detail">
 								<form ng-submit="registerWord()">
 									<input type="text" ng-model="wordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Tags"><br/>
