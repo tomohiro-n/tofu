@@ -119,6 +119,14 @@ a {
   padding-top:        4px;
   border-bottom:      1.5px solid $border_color;
   background-color:   $column_header_color;
+  position: relative;
+  text-align: center;
+}
+
+#sortBy{
+  margin-left:         145px;
+  bottom:              1.4px;
+  position:absolute;
 }
 
 div#word-in-list{

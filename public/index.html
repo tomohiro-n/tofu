@@ -58,14 +58,14 @@
 				<div class="row">
 					<div class="col-sm-6 outer left-pane" style="background:lightgray;">
 						<div class="col-sm-12 outer left-pane-header">All Words
+							<select ng-model="orderProp" id="sortBy">
+									<option value="word">あいうえお順</option>
+									<option value="updatedTime">更新日順</option>
+							</select>
 						</div>
-							<p>
-								<button ng-click="order='word'">order by name</button>
-								<button ng-click="order='updatedTime'">order by time</button>
-							</p>
 
 							<ul id="registered-words-list">
-								<li ng-repeat="word in words | filter:query| orderBy: order">
+								<li ng-repeat="word in words | filter:query| orderBy: orderProp: predicate:reverse">
 									<a href="#" tooltip="{{word.word}}">
 										<div ng-click="showWordDetail(word)" id="word-in-list">
 											<div class="row">
