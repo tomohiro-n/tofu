@@ -42,6 +42,9 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		$scope.wordTags = word.tags;
 		$scope.wordReadOnlyMode = true;
 	};
+
+	$scope.orderProp = 'updatedTime';
+
 });
 
 Tofu.service.TofuService.directive('xngFocus', function() {
@@ -52,3 +55,4 @@ Tofu.service.TofuService.directive('xngFocus', function() {
 			},true);
 	};
 });
+
