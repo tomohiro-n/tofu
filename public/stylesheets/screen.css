@@ -147,12 +147,17 @@ a {
 
 /* line 126, ../sass/screen.scss */
 #sortBy {
-  margin-left: 145px;
-  bottom: 1.4px;
+  margin-left: 140px;
+  top: 1.5px;
+  bottom: 1px;
   position: absolute;
+  border: 1px solid #c6c6c6;
+  height: 20px;
+  width: 110px;
+  font-size: 80%;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 2px;
   background-color: white;
@@ -172,13 +177,13 @@ div#word-in-list {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-/* line 151, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 div#word-in-list div#word-name-in-list {
   top: 10px;
   left: 10px;
   font-size: 100%;
 }
-/* line 157, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 div#word-in-list div#word-time-in-list {
   top: 10px;
   right: 10px;
@@ -187,11 +192,11 @@ div#word-in-list div#word-time-in-list {
   text-align: right;
   font-color: green;
 }
-/* line 166, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 div#word-in-list div#word-list-latter-part {
   position: relative;
 }
-/* line 170, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 div#word-in-list div#word-desc-in-list {
   position: absolute;
   top: 12.5px;
@@ -199,7 +204,7 @@ div#word-in-list div#word-desc-in-list {
   color: gray;
   font-size: 80%;
 }
-/* line 178, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 div#word-in-list div#word-tags-in-list {
   position: absolute;
   color: green;
@@ -212,7 +217,7 @@ div#word-in-list div#word-tags-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 191, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .left-pane {
   height: 600px;
   vertical-align: middle;
@@ -227,7 +232,7 @@ Common for the columns (new ver with Bootstrap)
   left: 0px;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .right-pane {
   height: 600px;
   vertical-align: middle;

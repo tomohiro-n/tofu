@@ -124,9 +124,14 @@ a {
 }
 
 #sortBy{
-  margin-left:         145px;
-  bottom:              1.4px;
-  position:absolute;
+  margin-left:         140px;
+  top:                 1.5px;
+  bottom:              1px;
+  position:            absolute;
+  border:              1px solid $border_color;
+  height:              20px;  
+  width:               110px; 
+  font-size:           80%; 
 }
 
 div#word-in-list{
