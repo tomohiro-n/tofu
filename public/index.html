@@ -45,9 +45,10 @@
 
 							<form ng-submit="registerNewWord()">
 								<button type="submit" class="btn btn-success btn-large register-new-word"/>
-									<span class="glyphicon glyphicon-plus"></span> Add New Word
+									<!-- TODO make glyphicon work without errors -->
+									<!--<span class="glyphicon glyphicon-plus">Add New Word</span>-->
+									<span>Add New Word</span>
 								</button>
-
 							</form>
 						</div>
 				 	</div>
@@ -57,8 +58,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 outer left-pane" style="background:lightgray;">
-						<div class="col-sm-12 outer left-pane-header">All Words
-						</div>
+						<div class="col-sm-12 outer left-pane-header">All Words</div>
 							<ul id="registered-words-list">
 								<li ng-repeat="word in words | filter:query">
 									<a href="#" tooltip="{{word.word}}">
@@ -76,7 +76,9 @@
 													{{word.description}}
 												</div>
 												<div id="word-tags-in-list">
-													{{word.tags}}
+													<ul class="no-after-newline">
+														<li ng-repeat="tagInWord in word.tags" class="tag-in-list">{{tagInWord}} </li>
+													</ul>
 												</div>
 											</div>
 										</div>
@@ -88,7 +90,13 @@
 						<div class="col-sm-6 outer right-pane" style="background:lightgray;">
 							<div id="registered-words-detail">
 								<form ng-submit="registerWord()">
-									<input type="text" ng-model="wordTags" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Tags"><br/>
+									<ul class="no-after-newline">
+										<li ng-repeat="tag in wordTags" class="btn-tags">
+											<!-- TODO delete button -->
+											{{tag}}
+										</li>
+										<input type="text" ng-model="wordNewTags" class="btn-tags no-before-newline-input" ng-show="!wordReadOnlyMode" placeholder="+ tag">
+									</ul>
 									<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
 									<label>-----------------</label><br/>
 									<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>

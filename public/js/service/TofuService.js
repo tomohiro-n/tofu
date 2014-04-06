@@ -3,7 +3,6 @@ goog.provide('Tofu.service');
 Tofu.service.TofuService = angular.module('tofuControllers', []);
 
 Tofu.service.TofuService.controller('tofuController', function($scope) {
-
 	$scope.words = [];
 	$scope.wordReadOnlyMode = true;
 	for(var key in localStorage) {
@@ -15,7 +14,12 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 
 	$scope.registerWord = function() {
 		var wordName = $scope.wordName;
-		var word = new Tofu.model.Word(wordName, $scope.wordDescription, $scope.wordTags);
+		$scope.wordTags = $scope.wordTags.concat($scope.wordNewTags.split(' ')).filter(function(tag) {
+			return tag != '';
+		}, this);
+		$scope.wordNewTags = null;
+		var tags = $scope.wordTags;
+		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags);
 		$scope.words = $scope.words.filter(function(word) {
 			return word.word != wordName;
 		}, this);
@@ -27,7 +31,8 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	$scope.registerNewWord = function() {
 		$scope.wordName = '';
 		$scope.wordDescription = '';
-		$scope.wordTags = '';
+		$scope.wordTags = [];
+		$scope.wordNewTags = "";
 		$scope.wordReadOnlyMode = false;
 	};
 

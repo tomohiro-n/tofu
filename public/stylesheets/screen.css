@@ -3,7 +3,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -83,12 +83,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 64, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body {
   background-color: #e6e9e2;
   font-family: "Roboto", Meiryo, メイリオ;
@@ -96,37 +96,74 @@ body {
   position: relative;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 a {
   color: black;
+}
+
+/* line 95, ../sass/screen.scss */
+.btn-tags {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/* line 102, ../sass/screen.scss */
+.tag-in-list {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 107, ../sass/screen.scss */
+.no-after-newline {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 112, ../sass/screen.scss */
+.no-before-newline-input {
+  padding-top: 0px;
 }
 
 /*--------------------------------------------
  Search Bar
 --------------------------------------------*/
-/* line 83, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .navbar {
   background-color: #4f5050;
   border-bottom: 0px;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .header-nav-search .row {
   position: relative;
 }
-/* line 94, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .header-nav-search .nav-search {
   background-color: #8c8c8c;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-/* line 100, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .header-nav-search .register-new-word {
   position: absolute;
   left: 86%;
   bottom: 10px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .header-nav-search .search-box {
   width: 560px;
   margin-left: -20px;
@@ -135,7 +172,7 @@ a {
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 117, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .left-pane-header {
   height: 25px;
   padding-top: 4px;
@@ -143,7 +180,7 @@ a {
   background-color: #fafafa;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 2px;
   background-color: white;
@@ -163,13 +200,13 @@ div#word-in-list {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-/* line 143, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 div#word-in-list div#word-name-in-list {
   top: 10px;
   left: 10px;
   font-size: 100%;
 }
-/* line 149, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 div#word-in-list div#word-time-in-list {
   top: 10px;
   right: 10px;
@@ -178,11 +215,11 @@ div#word-in-list div#word-time-in-list {
   text-align: right;
   font-color: green;
 }
-/* line 158, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 div#word-in-list div#word-list-latter-part {
   position: relative;
 }
-/* line 162, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 div#word-in-list div#word-desc-in-list {
   position: absolute;
   top: 12px;
@@ -190,7 +227,7 @@ div#word-in-list div#word-desc-in-list {
   color: gray;
   font-size: 85%;
 }
-/* line 170, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 div#word-in-list div#word-tags-in-list {
   position: absolute;
   color: green;
@@ -203,7 +240,7 @@ div#word-in-list div#word-tags-in-list {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 183, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 .left-pane {
   height: 600px;
   vertical-align: middle;
@@ -218,7 +255,7 @@ Common for the columns (new ver with Bootstrap)
   left: 0px;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .right-pane {
   height: 600px;
   vertical-align: middle;
