@@ -19,10 +19,11 @@ $width_per_word_in_list:  567px;
 $bg_color:            rgb(230, 233, 226);
 $bg_word_list_color:  white;
 $column_color:        rgb(226,225,220);
-$column_header_color: rgb(250,250,250);
+$column_header_color: rgb(244,243,239);
 $header_color:        444545;
 $search_nav_color:    darkgray;
 $border_color:        rgb(198,198,198);
+$register-new-word-button-color:  rgb(113,188,57);
 
 /*text related designs*/
 $header_text_color:   white;
@@ -49,7 +50,7 @@ $search_input_height: 22px;
   vertical-align:    middle;
   background-color:  $column_color;
   border:            1.25px solid $border_color;
-  margin-top:        10px;
+  border-top:        0px;
   padding:           0px;
   text-align:        center;
   display:           table-cell;
@@ -95,17 +96,27 @@ a {
     @include navbar-search-bg;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius:  10px;
+    margin-bottom:              10px;
   }
 
   .register-new-word{
-    position: absolute;
-    left:     86%;
-    bottom:   10px;
+    position:             absolute;
+    background-color:     $register-new-word-button-color;
+    border-color:         $register-new-word-button-color;
+    left:                 86%;
+    bottom:               10px;
+    height:               30px;
   }
 
   .search-box{
-    width:       560px;
-    margin-left: -20px;
+    width:                      560px;
+    height:                     30px;
+    margin-left:                -20px;
+    margin-top:                 2.25px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius:  15px;
+    border-top-right-radius:    15px;
+    border-top-left-radius:     15px;
   }
 }
 
@@ -117,10 +128,34 @@ a {
 .left-pane-header{
   height:             25px;
   padding-top:        4px;
-  border-bottom:      1.5px solid $border_color;
+  border:      1.5px solid $border_color;
+  background-color:   $column_header_color;
+  position:           relative;
+  text-align:         center;
+  font-color:         $sub_text_color;
+}
+
+.right-pane-header1{
+  height:             25px;
+  padding-top:        4px;
+  border:      1.5px solid $border_color;
+  background-color:   $column_header_color;
+  position:           relative;
+  text-align:         center;
+  font-color:         $sub_text_color;
+
+}
+
+.right-pane-header2{
+  height:             25px;
+  padding-top:        4px;
+  border:      1.5px solid $border_color;
   background-color:   $column_header_color;
   position: relative;
-  text-align: center;
+  text-align: left;
+  padding-top: 7px;
+  font-size: 70%;
+  font-color:         $sub_text_color;
 }
 
 #sortBy{
