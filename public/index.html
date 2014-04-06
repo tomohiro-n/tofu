@@ -1,129 +1,129 @@
 <html ng-app="tofu">
-	<head>
+<head>
 	<title>tofu</title>
 	<meta charset=utf-8>
 	<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	</head>
+</head>
 
-	<script src="js/lib/closure-library/closure/goog/base.js"></script>
-	<script src="js/lib/moment-with-langs.min.js"></script>
-	<script src="js/lib/jquery-2.1.0.min.js"></script>
-	<script src="js/lib/underscore-min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
-	<script src="js/lib/ui-bootstrap-tpls-0.10.0.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/model/Word.js"></script>
-	<script src="js/service/TofuService.js"></script>
+<script src="js/lib/closure-library/closure/goog/base.js"></script>
+<script src="js/lib/moment-with-langs.min.js"></script>
+<script src="js/lib/jquery-2.1.0.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="js/app.js"></script>
+<script src="js/model/Word.js"></script>
+<script src="js/service/TofuService.js"></script>
 
-	<body>
-		<!-----header navー-->
-		<div class="header-nav">
-	 		<nav class="navbar navbar-inverse navbar-static-top">
-	      		<div class="navbar-header">
-	       		 	<a class="navbar-brand" href="">Tofu</a>
-	      		</div>
-	 		</nav>
- 		</div>
+<body>
+<!-----header navー-->
+<div class="header-nav">
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="">Tofu</a>
+		</div>
+	</nav>
+</div>
 
 
-		<!-----search nav header---->
-		<div ng-controller="tofuController">
+<!-----search nav header---->
+<div ng-controller="tofuController">
 
-			<div class = "header-nav-search">
-				<div class="container">
-					<div class="row nav-search">
-						<div class="col-sm-12 nav-search" style="height:50px">
-				       		<!-----search bar start ---->
-				       		<form class="navbar-form navbar-left" role="search" placeholder="Search">
-				       			<div class="form-group">
-							   		<input type="text" class="form-control search-box" placeholder="Search" ng-model="query">
-							    </div>
-							</form>
-							<!-----search bar end---->
-
-							<form ng-submit="registerNewWord()">
-								<button type="submit" class="btn btn-success btn-large register-new-word"/>
-									<!-- TODO make glyphicon work without errors -->
-									<!--<span class="glyphicon glyphicon-plus">Add New Word</span>-->
-									<span>Add New Word</span>
-								</button>
-							</form>
+	<div class = "header-nav-search">
+		<div class="container">
+			<div class="row nav-search">
+				<div class="col-sm-12 nav-search" style="height:50px">
+					<!-----search bar start ---->
+					<form class="navbar-form navbar-left" role="search" placeholder="Search">
+						<div class="form-group">
+							<input type="text" class="form-control search-box" placeholder="Search" ng-model="query">
 						</div>
-				 	</div>
-				</div>
-	 		</div>
+					</form>
+					<!-----search bar end---->
 
-			<div class="container">
-				<div class="row">
-
-				<div class="col-sm-6 outer left-pane-header">All Words
-					<select ng-model="orderProp" id="sortBy">
-							<option value="word">Alphabetical</option>
-							<option value="updatedTime">Most Recent</option>
-					</select>
-				</div>
-
-				<div class="col-sm-6 outer right-pane-header1">This is where tags should come</div>	
-
-					<div class="col-sm-6 outer left-pane" style="background:lightgray;">
-							<ul id="registered-words-list">
-								<li ng-repeat="word in words | filter:query| orderBy: orderProp: predicate:reverse">
-									<a href="#" tooltip="{{word.word}}">
-										<div ng-click="showWordDetail(word)" id="word-in-list">
-											<div class="row">
-												<div class="col-sm-6" id="word-name-in-list">
-													{{word.word}}
-												</div>
-												<div class="col-sm-6" id="word-time-in-list">
-													{{word.getUpdatedTime()}}
-												</div>
-											</div>
-											<div id="word-list-latter-part">
-												<div id="word-desc-in-list">
-													{{word.description}}
-												</div>
-												<div id="word-tags-in-list">
-													<ul class="no-after-newline">
-														<li ng-repeat="tagInWord in word.tags" class="tag-in-list">{{tagInWord}} </li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-sm-6 outer right-pane" style="background:lightgray;">
-							
-							<div class="col-sm-12 outer right-pane-header2">Creatd：2013/09/01　　Updated ：2013/10/2</div>
-							<div id="registered-words-detail">
-								<form ng-submit="registerWord()">
-									<ul class="no-after-newline">
-										<li ng-repeat="tag in wordTags" class="btn-tags">
-											<!-- TODO delete button -->
-											{{tag}}
-										</li>
-										<input type="text" ng-model="wordNewTags" class="btn-tags no-before-newline-input" ng-show="!wordReadOnlyMode" placeholder="+ tag">
-									</ul>
-									<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
-									<label>-----------------</label><br/>
-									<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
-									<input type="submit" value="Update"/>
-								</form>
-							</div>
-						</div>
-					</div>
+					<form ng-submit="registerNewWord()">
+						<button type="submit" class="btn btn-success btn-large register-new-word"/>
+						<!-- TODO make glyphicon work without errors -->
+						<!--<span class="glyphicon glyphicon-plus">Add New Word</span>-->
+						<span>Add New Word</span>
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>
-			
+	</div>
 
-		<footer class ="footer">
-		Copyright 2014 Tofu Team. All rights reserved.
-		</footer>
+	<div class="container">
+		<div class="row">
 
-	</body>
+			<div class="col-sm-6 outer left-pane-header">All Words
+				<select ng-model="orderProp" id="sortBy">
+					<option value="word">Alphabetical</option>
+					<option value="updatedTime">Most Recent</option>
+				</select>
+			</div>
+
+			<div class="col-sm-6 outer right-pane-header1">
+				<ul class="no-after-newline">
+					<li ng-repeat="tag in wordTags" class="btn-tags">
+						<!-- TODO delete button -->
+						{{tag}}
+					</li>
+					<input type="text" ng-model="wordNewTags" class="btn-tags no-before-newline-input" ng-show="!wordReadOnlyMode" placeholder="+ tag">
+				</ul>
+			</div>
+
+			<div class="col-sm-6 outer left-pane" style="background:lightgray;">
+				<ul id="registered-words-list">
+					<li ng-repeat="word in words | filter:query | orderBy: orderProp: predicate:reverse">
+						<a href="#" tooltip="{{word.word}}">
+							<div ng-click="showWordDetail(word)" id="word-in-list">
+								<div class="row">
+									<div class="col-sm-6" id="word-name-in-list">
+										{{word.word}}
+									</div>
+									<div class="col-sm-6" id="word-time-in-list">
+										{{word.getUpdatedTime()}}
+									</div>
+								</div>
+								<div id="word-list-latter-part">
+									<div id="word-desc-in-list">
+										{{word.description}}
+									</div>
+									<div id="word-tags-in-list">
+										<ul class="no-after-newline">
+											<li ng-repeat="tagInWord in word.tags" class="tag-in-list">{{tagInWord}} </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-sm-6 outer right-pane" style="background:lightgray;">
+
+				<div class="col-sm-12 outer right-pane-header2">Created：2013/09/01　　Updated ：{{wordUpdatedTime}}</div>
+				<div id="registered-words-detail">
+					<form ng-submit="registerWord()">
+						<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
+						<label>-----------------</label><br/>
+						<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
+						<input type="submit" value="Update"/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer class ="footer">
+	Copyright 2014 Tofu Team. All rights reserved.
+</footer>
+
+</body>
 </html>

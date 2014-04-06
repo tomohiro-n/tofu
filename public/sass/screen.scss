@@ -62,31 +62,27 @@ $search_input_height: 22px;
 @mixin btn {
 	display: inline-block;
 	margin-bottom: 0;
-	font-weight: 400;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
 	background-image: none;
 	border: 1px solid transparent;
 	white-space: nowrap;
-	padding: 6px 12px;
-	font-size: 14px;
-	line-height: 1.42857143;
 	border-radius: 4px;
 }
 
 @mixin main-panes{
-  height:            600px;
-  vertical-align:    middle;
-  background-color:  $column_color;
-  border:            1.25px solid $border_color;
-  border-top:        0px;
-  padding:           0px;
-  text-align:        center;
-  display:           table-cell;
-  overflow-y:        scroll;
-  top:               0px;
-  left:              0px;
+	height:            600px;
+	vertical-align:    middle;
+	background-color:  $column_color;
+	border:            1.25px solid $border_color;
+	border-top:        0px;
+	padding:           0px;
+	text-align:        center;
+	display:           table-cell;
+	overflow-y:        scroll;
+	top:               0px;
+	left:              0px;
 }
 
 /*--------------------------------------------
@@ -139,36 +135,36 @@ a {
 
 .header-nav-search{
 
-  .row{
-  position: relative;
-  }
+	.row{
+		position: relative;
+	}
 
-  .nav-search{
-    @include navbar-search-bg;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius:  10px;
-    margin-bottom:              10px;
-  }
+	.nav-search{
+		@include navbar-search-bg;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius:  10px;
+		margin-bottom:              10px;
+	}
 
-  .register-new-word{
-    position:             absolute;
-    background-color:     $register-new-word-button-color;
-    border-color:         $register-new-word-button-color;
-    left:                 86%;
-    bottom:               10px;
-    height:               30px;
-  }
+	.register-new-word{
+		position:             absolute;
+		background-color:     $register-new-word-button-color;
+		border-color:         $register-new-word-button-color;
+		left:                 86%;
+		bottom:               10px;
+		height:               30px;
+	}
 
-  .search-box{
-    width:                      560px;
-    height:                     30px;
-    margin-left:                -20px;
-    margin-top:                 2.25px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius:  15px;
-    border-top-right-radius:    15px;
-    border-top-left-radius:     15px;
-  }
+	.search-box{
+		width:                      560px;
+		height:                     30px;
+		margin-left:                -20px;
+		margin-top:                 2.25px;
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius:  15px;
+		border-top-right-radius:    15px;
+		border-top-left-radius:     15px;
+	}
 }
 
 
@@ -178,103 +174,103 @@ a {
 
 .left-pane-header{
 
-  height:             25px;
-  padding-top:        4px;
-  border:      1.5px solid $border_color;
-  background-color:   $column_header_color;
-  position:           relative;
-  text-align:         center;
-  font-color:         $sub_text_color;
+	height:             25px;
+	padding-top:        4px;
+	border:      1.5px solid $border_color;
+	background-color:   $column_header_color;
+	position:           relative;
+	text-align:         center;
+	font-color:         $sub_text_color;
 }
 
 .right-pane-header1{
-  height:             25px;
-  padding-top:        4px;
-  border:      1.5px solid $border_color;
-  background-color:   $column_header_color;
-  position:           relative;
-  text-align:         center;
-  font-color:         $sub_text_color;
+	height:             25px;
+	padding-top:        4px;
+	border:      1.5px solid $border_color;
+	background-color:   $column_header_color;
+	position:           relative;
+	text-align:         center;
+	font-color:         $sub_text_color;
 
 }
 
 .right-pane-header2{
-  height:             25px;
-  padding-top:        4px;
-  border:      1.5px solid $border_color;
-  background-color:   $column_header_color;
-  position: relative;
-  text-align: left;
-  padding-top: 7px;
-  font-size: 70%;
-  font-color:         $sub_text_color;
+	height:             25px;
+	padding-top:        4px;
+	border:      1.5px solid $border_color;
+	background-color:   $column_header_color;
+	position: relative;
+	text-align: left;
+	padding-top: 7px;
+	font-size: 70%;
+	font-color:         $sub_text_color;
 }
 
 #sortBy{
-  margin-left:         140px;
-  top:                 1.5px;
-  bottom:              1px;
-  position:            absolute;
-  border:              1px solid $border_color;
-  height:              20px;  
-  width:               110px; 
-  font-size:           80%; 
+	margin-left:         140px;
+	top:                 1.5px;
+	bottom:              1px;
+	position:            absolute;
+	border:              1px solid $border_color;
+	height:              20px;
+	width:               110px;
+	font-size:           80%;
 }
 
 div#word-in-list{
-  margin-top:           2px;
-  background-color:     $bg_word_list_color;
-  float:                left;
-  position:             relative;
-  width:                $width_per_word_in_list;
-  height:               $height_per_word_in_list;
-  top:                  6px;
-  left:                 7.5px;
-  text-align:           left;
-  border-bottom:        1px solid #e6e6e6;
-  border-bottom-width:  1px;
-  border-bottom-style:  solid;
-  border-bottom-color:  rgb(230, 230, 230);
-  cursor:               pointer !important;
-  overflow:             hidden;
-  overflow-x:           hidden;
-  overflow-y:           hidden;
+	margin-top:           2px;
+	background-color:     $bg_word_list_color;
+	float:                left;
+	position:             relative;
+	width:                $width_per_word_in_list;
+	height:               $height_per_word_in_list;
+	top:                  6px;
+	left:                 7.5px;
+	text-align:           left;
+	border-bottom:        1px solid #e6e6e6;
+	border-bottom-width:  1px;
+	border-bottom-style:  solid;
+	border-bottom-color:  rgb(230, 230, 230);
+	cursor:               pointer !important;
+	overflow:             hidden;
+	overflow-x:           hidden;
+	overflow-y:           hidden;
 
-  div#word-name-in-list{
-    top:       $height_per_word_in_list * 10 / 75;
-    left:      10px;
-    font-size: 100%;
-  }
+	div#word-name-in-list{
+		top:       $height_per_word_in_list * 10 / 75;
+		left:      10px;
+		font-size: 100%;
+	}
 
-  div#word-time-in-list{
-    top:        $height_per_word_in_list * 10 / 75;
-    right:      10px;
-    float:      right;
-    font-size:  70%;
-    text-align: right;
-    font-color: $date_text_color;
-  }
+	div#word-time-in-list{
+		top:        $height_per_word_in_list * 10 / 75;
+		right:      10px;
+		float:      right;
+		font-size:  70%;
+		text-align: right;
+		font-color: $date_text_color;
+	}
 
-  div#word-list-latter-part{
-    position:   relative;
-  }
+	div#word-list-latter-part{
+		position:   relative;
+	}
 
-  div#word-desc-in-list{
-    position:   absolute;
-    top:        $height_per_word_in_list * 12.5 / 75;
-    left:       10px;
-    color:       gray;
-    font-size:   80%;
-  }
+	div#word-desc-in-list{
+		position:   absolute;
+		top:        $height_per_word_in_list * 12.5 / 75;
+		left:       10px;
+		color:       gray;
+		font-size:   80%;
+	}
 
-  div#word-tags-in-list {
-    position:   absolute;
-    color:      green;
-    top:        $height_per_word_in_list * 42.5 / 75;
-    left:       10px;
-    font-size:  70%;
-    font-color: $tag_text_color;
-  }
+	div#word-tags-in-list {
+		position:   absolute;
+		color:      green;
+		top:        $height_per_word_in_list * 42.5 / 75;
+		left:       10px;
+		font-size:  70%;
+		font-color: $tag_text_color;
+	}
 }
 
 /*--------------------------------------------

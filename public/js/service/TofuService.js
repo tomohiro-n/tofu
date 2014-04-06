@@ -40,6 +40,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		$scope.wordName = word.word;
 		$scope.wordDescription = word.description;
 		$scope.wordTags = word.tags;
+		$scope.wordUpdatedTime = word.getUpdatedTime();
 		$scope.wordReadOnlyMode = true;
 	};
 
