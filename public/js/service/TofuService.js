@@ -45,7 +45,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		$scope.wordTags = word.tags;
 		$scope.wordCreatedTime = word.getCreatedTime();
 		$scope.wordUpdatedTime = word.getUpdatedTime();
-		$scope.wordReadOnlyMode = true;
+		$scope.wordReadOnlyMode = false;
 	};
 
 	$scope.orderProp = 'updatedTime';

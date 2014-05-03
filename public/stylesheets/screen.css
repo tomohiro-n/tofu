@@ -258,7 +258,7 @@ div#word-in-list div#word-time-in-list {
   float: right;
   font-size: 70%;
   text-align: right;
-  font-color: green;
+  color: green;
 }
 /* line 258, ../sass/screen.scss */
 div#word-in-list div#word-list-latter-part {
@@ -279,10 +279,9 @@ div#word-in-list div#word-tags-in-list {
   top: 42.5px;
   left: 10px;
   font-size: 70%;
-  font-color: green;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 input#word-name {
   width: 98%;
   text-align: center;
@@ -290,7 +289,7 @@ input#word-name {
   color: #85a2a1;
 }
 
-/* line 287, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 textarea#word-description {
   width: 98%;
   vertical-align: middle;
@@ -301,7 +300,7 @@ textarea#word-description {
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 297, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .left-pane {
   height: 600px;
   vertical-align: middle;
@@ -316,7 +315,7 @@ Common for the columns (new ver with Bootstrap)
   left: 0px;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .right-pane {
   height: 600px;
   vertical-align: middle;

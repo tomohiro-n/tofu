@@ -252,7 +252,7 @@ div#word-in-list{
 		float:      right;
 		font-size:  70%;
 		text-align: right;
-		font-color: $date_text_color;
+		color: $date_text_color;
 	}
 
 	div#word-list-latter-part{
@@ -269,11 +269,10 @@ div#word-in-list{
 
 	div#word-tags-in-list {
 		position:   absolute;
-		color:      green;
+		color:      $tag_text_color;;
 		top:        $height_per_word_in_list * 42.5 / 75;
 		left:       10px;
 		font-size:  70%;
-		font-color: $tag_text_color;
 	}
 }
 
