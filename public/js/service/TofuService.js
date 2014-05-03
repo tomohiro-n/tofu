@@ -5,25 +5,27 @@ Tofu.service.TofuService = angular.module('tofuControllers', []);
 Tofu.service.TofuService.controller('tofuController', function($scope) {
 	$scope.words = [];
 	$scope.wordReadOnlyMode = true;
-	for(var key in localStorage) {
+	var allData = Tofu.service.TofuService.getData();
+	for(var key in allData) {
 		if (key != undefined) {
-			var tmp = JSON.parse(localStorage[key]);
-			$scope.words.push(new Tofu.model.Word(tmp.word, tmp.description, tmp.tags, tmp.updatedTime));
+			var tmp = JSON.parse(allData[key]);
+			$scope.words.push(new Tofu.model.Word(tmp.word, tmp.description, tmp.tags, tmp.createdTime, tmp.updatedTime));
 		}
 	}
 
 	$scope.registerWord = function() {
 		var wordName = $scope.wordName;
-		$scope.wordTags = $scope.wordTags.concat($scope.wordNewTags.split(' ')).filter(function(tag) {
+		var newTags = $scope.wordNewTags ? $scope.wordNewTags.split(' ') : [];
+		$scope.wordTags = $scope.wordTags.concat(newTags).filter(function(tag) {
 			return tag != '';
 		}, this);
 		$scope.wordNewTags = null;
 		var tags = $scope.wordTags;
-		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags);
+		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags, $scope.wordCreatedTime);
 		$scope.words = $scope.words.filter(function(word) {
-			return word.word != wordName;
+			return word.word != wordName && word.word != $scope.editingWordName;
 		}, this);
-		localStorage[$scope.wordName] = JSON.stringify(word);
+		allData[$scope.wordName] = JSON.stringify(word);
 		$scope.words.push(word);
 		$scope.wordReadOnlyMode = true;
 	};
@@ -38,8 +40,10 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 
 	$scope.showWordDetail = function(word) {
 		$scope.wordName = word.word;
+		$scope.editingWordName = word.word;
 		$scope.wordDescription = word.description;
 		$scope.wordTags = word.tags;
+		$scope.wordCreatedTime = word.getCreatedTime();
 		$scope.wordUpdatedTime = word.getUpdatedTime();
 		$scope.wordReadOnlyMode = true;
 	};
@@ -47,6 +51,10 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	$scope.orderProp = 'updatedTime';
 
 });
+
+Tofu.service.TofuService.getData = function() {
+	return localStorage;
+}
 
 Tofu.service.TofuService.directive('xngFocus', function() {
 	return function(scope, element, attrs) {

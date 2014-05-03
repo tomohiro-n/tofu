@@ -85,6 +85,10 @@ $search_input_height: 22px;
 	left:              0px;
 }
 
+@mixin input-right-pane {
+	width: 98%;
+}
+
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
@@ -273,11 +277,26 @@ div#word-in-list{
 	}
 }
 
+input#word-name {
+	@include input-right-pane;
+	text-align: center;
+	font-weight: bold;
+	color: rgb(133, 162, 161);
+}
+
+textarea#word-description {
+	@include input-right-pane;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
 .left-pane{
 	@include main-panes;
+
 }
 
 .right-pane{

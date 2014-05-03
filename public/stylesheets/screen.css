@@ -83,12 +83,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*--------------------------------------------
  Overall
 --------------------------------------------*/
-/* line 91, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 html {
   overflow: auto;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 body {
   background-color: #e6e9e2;
   font-family: "Roboto", Meiryo, メイリオ;
@@ -96,12 +96,12 @@ body {
   position: relative;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 a {
   color: black;
 }
 
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .btn-tags {
   display: inline-block;
   margin-bottom: 0;
@@ -117,19 +117,19 @@ a {
   border-color: #285e8e;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .tag-in-list {
   display: inline-block;
   margin-right: 10px;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .no-after-newline {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .no-before-newline-input {
   padding-top: 0px;
 }
@@ -137,24 +137,24 @@ a {
 /*--------------------------------------------
  Search Bar
 --------------------------------------------*/
-/* line 131, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .navbar {
   background-color: #4f5050;
   border-bottom: 0px;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .header-nav-search .row {
   position: relative;
 }
-/* line 142, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .header-nav-search .nav-search {
   background-color: #8c8c8c;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-bottom: 10px;
 }
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .header-nav-search .register-new-word {
   position: absolute;
   background-color: #71bc39;
@@ -163,7 +163,7 @@ a {
   bottom: 10px;
   height: 30px;
 }
-/* line 158, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .header-nav-search .search-box {
   width: 560px;
   height: 30px;
@@ -178,7 +178,7 @@ a {
 /*--------------------------------------------
  Left column
 --------------------------------------------*/
-/* line 175, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .left-pane-header {
   height: 25px;
   padding-top: 4px;
@@ -189,7 +189,7 @@ a {
   font-color: light gray;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .right-pane-header1 {
   height: 25px;
   padding-top: 4px;
@@ -200,7 +200,7 @@ a {
   font-color: light gray;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .right-pane-header2 {
   height: 25px;
   padding-top: 4px;
@@ -213,7 +213,7 @@ a {
   font-color: light gray;
 }
 
-/* line 209, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #sortBy {
   margin-left: 140px;
   top: 1.5px;
@@ -225,7 +225,7 @@ a {
   font-size: 80%;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 div#word-in-list {
   margin-top: 2px;
   background-color: white;
@@ -245,13 +245,13 @@ div#word-in-list {
   overflow-x: hidden;
   overflow-y: hidden;
 }
-/* line 239, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 div#word-in-list div#word-name-in-list {
   top: 10px;
   left: 10px;
   font-size: 100%;
 }
-/* line 245, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 div#word-in-list div#word-time-in-list {
   top: 10px;
   right: 10px;
@@ -260,11 +260,11 @@ div#word-in-list div#word-time-in-list {
   text-align: right;
   font-color: green;
 }
-/* line 254, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 div#word-in-list div#word-list-latter-part {
   position: relative;
 }
-/* line 258, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 div#word-in-list div#word-desc-in-list {
   position: absolute;
   top: 12.5px;
@@ -272,7 +272,7 @@ div#word-in-list div#word-desc-in-list {
   color: gray;
   font-size: 80%;
 }
-/* line 266, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 div#word-in-list div#word-tags-in-list {
   position: absolute;
   color: green;
@@ -282,10 +282,26 @@ div#word-in-list div#word-tags-in-list {
   font-color: green;
 }
 
+/* line 280, ../sass/screen.scss */
+input#word-name {
+  width: 98%;
+  text-align: center;
+  font-weight: bold;
+  color: #85a2a1;
+}
+
+/* line 287, ../sass/screen.scss */
+textarea#word-description {
+  width: 98%;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
 /*--------------------------------------------
 Common for the columns (new ver with Bootstrap)
 --------------------------------------------*/
-/* line 279, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 .left-pane {
   height: 600px;
   vertical-align: middle;
@@ -300,7 +316,7 @@ Common for the columns (new ver with Bootstrap)
   left: 0px;
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .right-pane {
   height: 600px;
   vertical-align: middle;

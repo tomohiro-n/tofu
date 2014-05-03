@@ -106,13 +106,12 @@
 
 			<div class="col-sm-6 outer right-pane" style="background:lightgray;">
 
-				<div class="col-sm-12 outer right-pane-header2">Created：2013/09/01　　Updated ：{{wordUpdatedTime}}</div>
+				<div class="col-sm-12 outer right-pane-header2">Created：{{wordCreatedTime}}　　Updated ：{{wordUpdatedTime}}</div>
 				<div id="registered-words-detail">
 					<form ng-submit="registerWord()">
-						<input type="text" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
-						<label>-----------------</label><br/>
-						<input type="text" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"><br/>
-						<input type="submit" value="Update"/>
+						<input type="text" id="word-name" ng-model="wordName" xng-focus="!wordReadOnlyMode" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Name"><br/>
+						<textarea type="text" rows="30" cols="1" id="word-description" ng-model="wordDescription" ng-readonly="wordReadOnlyMode" ng-dblclick="wordReadOnlyMode = false" placeholder="Word Description"></textarea><br/>
+						<input id="word-submit" type="submit" value="Update">
 					</form>
 				</div>
 			</div>
