@@ -14,6 +14,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	}
 
 	$scope.registerWord = function() {
+		var isForNewWord = $scope.isForNewWord();
 		var wordName = $scope.wordName;
 		var newTags = $scope.wordNewTags ? $scope.wordNewTags.split(' ') : [];
 		$scope.wordTags = $scope.wordTags.concat(newTags).filter(function(tag) {
@@ -21,7 +22,8 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		}, this);
 		$scope.wordNewTags = null;
 		var tags = $scope.wordTags;
-		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags, $scope.wordCreatedTime);
+		var createdTime = (isForNewWord && !$scope.wordInFocus) ? null : $scope.wordInFocus.createdTime;
+		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags, createdTime);
 		$scope.words = $scope.words.filter(function(word) {
 			return word.word != wordName && word.word != $scope.editingWordName;
 		}, this);
@@ -31,6 +33,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	};
 
 	$scope.registerNewWord = function() {
+		$scope.wordInFocus = null;
 		$scope.wordName = '';
 		$scope.wordDescription = '';
 		$scope.wordTags = [];
@@ -39,6 +42,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 	};
 
 	$scope.showWordDetail = function(word) {
+		$scope.wordInFocus = word;
 		$scope.wordName = word.word;
 		$scope.editingWordName = word.word;
 		$scope.wordDescription = word.description;
@@ -47,6 +51,10 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		$scope.wordUpdatedTime = word.getUpdatedTime();
 		$scope.wordReadOnlyMode = false;
 	};
+
+	$scope.isForNewWord = function() {
+		return ($scope.wordInFocus == null);
+	}
 
 	$scope.orderProp = 'updatedTime';
 

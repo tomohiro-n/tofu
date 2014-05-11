@@ -4,8 +4,8 @@ Tofu.model.Word = function(word, description, tags, createdTime, updatedTime) {
 	this.word = word;
 	this.description = description;
 	this.tags = tags;
-	this.createdTime = moment(createdTime) || moment();
-	this.updatedTime = moment(updatedTime) || moment();
+	this.createdTime = createdTime || moment();
+	this.updatedTime = updatedTime || moment();
 };
 
 Tofu.model.Word.prototype.getCreatedTime = function() {
