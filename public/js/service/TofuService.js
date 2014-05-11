@@ -22,7 +22,7 @@ Tofu.service.TofuService.controller('tofuController', function($scope) {
 		}, this);
 		$scope.wordNewTags = null;
 		var tags = $scope.wordTags;
-		var createdTime = (isForNewWord && !$scope.wordInFocus) ? null : $scope.wordInFocus.createdTime;
+		var createdTime = (isForNewWord && !$scope.wordInFocus) ? undefined : $scope.wordInFocus.createdTime;
 		var word = new Tofu.model.Word(wordName, $scope.wordDescription, tags, createdTime);
 		$scope.words = $scope.words.filter(function(word) {
 			return word.word != wordName && word.word != $scope.editingWordName;
